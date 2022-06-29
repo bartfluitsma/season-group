@@ -1,0 +1,22 @@
+@use "../../theme/_global.scss" as *;
+@use "../../theme/theme.scss" as *;
+
+
+.experience {
+  &__content {
+    padding: 120px 0;
+  }
+  &__title {
+    @include title-page;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 40px;
+    text-align: center;
+  }
+  @media (min-width: $desktop) { 
+    &__content {
+      padding: 200px 0;
+    }
+  }
+}

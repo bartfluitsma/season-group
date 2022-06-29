@@ -1,0 +1,28 @@
+@use '../../theme/theme.scss'as *;
+@use "../../theme/_global.scss" as *;
+
+.sliderMobile {
+  &__container {
+    padding: 0 25px;
+
+  }
+  &__tag {
+    @include tag-section;
+
+  }
+  &__title {
+    @include title-page;
+  }
+  &__header {
+    margin-bottom: 40px;
+  }
+  &__footer {
+    span {
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      line-height: 20px;
+      color: $numberText;
+    }
+  }
+}

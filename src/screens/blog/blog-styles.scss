@@ -1,0 +1,78 @@
+@use "../../theme/_global.scss" as *;
+@use "../../theme/theme.scss" as *;
+
+.blog {
+  &__container {
+    padding-top: $gapTitlePage;
+  }
+  &__box {
+    margin-bottom: 120px;
+  }
+  &__head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    .page-title {
+      @include title-page;
+      margin-bottom: 10px;
+      
+    }
+    .page-tag {
+      color: $primary;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+    .page-date {
+      color: $auxText;
+      font-size: 18px;
+      letter-spacing: 0;
+      line-height: 30px;
+    }
+    
+  }
+  &__image {
+    position: relative;
+    min-height: 440px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 80px;
+    border-radius: 6px;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100%;
+    }
+  }
+  &__related {
+    .page-title {
+      @include title-page;
+      margin-bottom: 50px;
+      
+    }
+  }
+  @media (min-width: $desktop) {
+    &__head {
+      margin-bottom: 60px;
+
+    }
+    &__box {
+      margin-bottom: 160px;
+    }
+    &__image {
+      position: relative;
+      min-height: 440px;
+      width: 100%;
+      margin-bottom: 80px;
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+}

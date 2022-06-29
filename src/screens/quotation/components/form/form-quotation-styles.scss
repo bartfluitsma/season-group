@@ -1,0 +1,122 @@
+@use "../../../../theme/_global.scss"as *;
+@use "../../../../theme/theme.scss"as *;
+
+.formQuotation {
+  &__container {
+    padding: 48px;
+  }
+
+  &__form {
+    &__title {
+      p {
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 30px;
+
+      }
+      &.up {
+        margin-top: 50px;
+      }
+    }
+    &__label {
+      padding-bottom: 4px;
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 23.6px;
+    }
+    &__group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 24px;
+      
+      label {
+        padding-bottom: 4px;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 23.6px;
+      }
+      > .input {
+        height: 44px;
+        border: 1px solid #dedede;
+        padding: 11px;
+      }
+      > .textarea {
+        border: 1px solid #dedede;
+        padding: 11px;
+      }
+    }
+
+  }
+  &__box__checkbox {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    // height: 30px;
+    justify-content: flex-start;
+  }
+  &__checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+    font-size: 16px;
+    color: $text;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      &:checked ~ .formQuotation__checkbox__span {
+        background-color: $primary;
+        &:after {
+          display: block;
+        }
+      }
+    }
+    .formQuotation__checkbox__span {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      border: 1px solid #dedede;
+      background-color: $westar;
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 7px;
+        top: 4px;
+        width: 5px;
+        height: 9px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  &__button__box {
+    display: block;
+    padding-top: 48px;
+  }
+  &__button {
+    height: 63px;
+    width: 200px;
+    border-radius: 31.5px;
+    background-color: $secondary;
+    color: $white;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+.radioButton__container {
+  display: inline-block;
+  margin-right: 40px;
+    input {
+      margin-right: 12px;
+    }
+}

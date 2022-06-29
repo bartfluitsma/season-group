@@ -1,0 +1,65 @@
+@use "../../theme/_global.scss" as *;
+@use "../../theme/theme.scss" as *;
+
+.under-construction-page {
+  &__container {
+    margin-top: 40px;
+    margin-bottom: 160px;
+    .container-xxl {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      .row {
+        gap: 24px;
+
+        .page-title {
+          @include title-page;
+        }
+
+        .page-desc {
+          @include desc-page;
+        }
+      }
+      .button__container {
+        height: 63px;
+        width: 100%;
+        border-radius: 31.5px;
+        span {
+          font-size: 16px;
+          color: $white;
+        }
+      }
+
+      .shape {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &__container {
+      margin-top: 35px;
+      margin-bottom: 330px;
+      .container-xxl {
+        position: relative;
+        gap: 48px;
+
+        .row {
+          gap: 22px;
+        }
+
+        .button__container {
+          width: 240px;
+        }
+
+        .shape {
+          position: absolute;
+          display: block;
+          right: -100px;
+        }
+      }
+    }
+  }
+}

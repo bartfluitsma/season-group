@@ -1,0 +1,122 @@
+@use '../../theme/theme.scss'as *;
+
+
+.cardWithPicture {
+
+  &__container {
+    width: 100%;
+    min-height: 493px;
+  }
+  &__box {
+    position: relative;
+    &__image {
+      background-color: #f2f;
+      top: 0;
+      height: 196px;
+      border-radius: 6px;
+      width: 100%;
+      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      &.displace {
+        position: absolute;
+        height: 273px;
+
+      }
+    }
+    &__tag {
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      border-radius: 4px;
+      background-color: rgba($color: $primary, $alpha: 0.8);
+      box-shadow: 0 2px 50px 0 rgba(218,232,248,0.6);
+      padding: 1px 12px 3px;
+      width: fit-content;
+      span {
+        color: $white;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 1.43px;
+        line-height: 20px;
+        text-transform: uppercase;
+      }
+    }
+    &__content {
+      position: relative;
+      padding: 10px;
+      > div {
+        position: relative;
+        width: 100%;
+        border-radius: 6px;
+        background-color: $white;
+        
+      }
+      &.displace {
+        padding-top: 187px;
+        > div {
+          padding: 28px;
+          box-shadow: 0 2px 50px 0 rgba(218,232,248,0.7)
+        }
+      }
+    }
+    &__title {
+      color: $text;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 30px;
+      .displace &{
+        color: $primary;
+        font-size: 18px;
+        line-height: 26px;
+
+
+      }
+    }
+    &__cont {
+      position: relative;
+    }
+    &__description {
+      position: relative;
+      color: $text;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 27px;
+      margin-bottom: 24px
+    }
+    &__date {
+      color: $text;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1.43px;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+    &__link {
+      p {
+        margin: 0;
+      }
+      span {
+        color: $secondary;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 20px;
+        text-align: center;
+      }
+      svg {
+        fill: $secondary;
+        margin-left: 8px;
+      }
+    }
+  }
+  @media (min-width: $desktop) { 
+    &__box {
+      &__content {
+        // padding-top: 212px;
+      }
+    }
+  }
+}

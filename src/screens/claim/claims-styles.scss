@@ -1,0 +1,12 @@
+@use "../../theme/_global.scss" as *;
+@use "../../theme/theme.scss" as *;
+
+.claim {
+  &__head {
+    margin-top: 36px;
+    .page-title {
+      @include title-page;
+      margin-bottom: 24px;
+    }
+  }
+}

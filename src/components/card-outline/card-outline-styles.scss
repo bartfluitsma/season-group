@@ -1,0 +1,30 @@
+@use "../../theme/_global.scss" as *;
+@use "../../theme/theme.scss" as *;
+
+.cardOutline {
+  &__container {
+    border: 1px solid $primaryLight;
+    border-bottom-right-radius: 40px;
+    padding: 36px;
+    min-height: 340px;
+    .cardOutline-title {
+      color: $primary;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 38px;
+    }
+    
+    .cardOutline-text {
+      color: $auxText;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 27px;
+    }
+  }
+  @media (min-width: $desktop) { 
+    &__container {
+      margin-top: 0;
+    }
+  }
+}

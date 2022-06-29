@@ -1,0 +1,49 @@
+@use '../../theme/theme.scss'as *;
+
+.button {
+  &__container {
+    height: 52px;
+    width:fit-content;
+    min-width: 200px;
+    border-radius: 26px;
+    background-color: $secondary;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &.outline {
+      height: 52px;
+      min-width: 152px;
+      background-color: $white;
+      border: 1px solid $secondary;
+      span {
+        color: $secondary;
+
+      }
+    }
+    &.fluid {
+      width: 100%;
+    }
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+    span {
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 20px;
+      text-align: center;
+      color: $white;
+    }
+
+  }
+  @media (min-width: $desktop) {
+    &__container {
+      &.fluid {
+        width: fit-content;
+      }
+    }
+  }
+}

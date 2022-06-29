@@ -1,0 +1,101 @@
+@use "../../theme/_global.scss" as *;
+@use "../../theme/theme.scss" as *;
+
+.findHospital {
+  &__container {
+
+  }
+  &__head {
+    .page-title {
+      @include title-page;
+      margin-bottom: 64px;
+    }
+  }
+  &__filters {
+    margin-bottom: 80px;
+  }
+  &__download {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    p {
+    }
+    svg {
+      color: $primary;
+      margin-right: 8px;
+    }
+  }
+  &__search {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    min-height: 44px;
+  }
+  &__search, &__download {
+    margin-bottom: 31px;
+  }
+
+  &__inputSearch {
+    padding: 0 5px;
+    border: 1px solid #DEDEDE;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 44px;
+    width: 100%;
+    svg {
+
+    }
+    input {
+      border: none;
+      min-height: 40px;
+    }
+  }
+
+  &__table {
+    thead tr {
+      border-radius: 4px 4px 0 0;
+      background-color: rgba($color: #CADFEF, $alpha: 0.2);
+      color: $text;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1.72px;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+    thead th {
+      padding: 22px;
+    }
+    tbody td {
+      padding: 27px 17px;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 27px;
+      color: $text;
+    }
+    tbody, td, tfoot, tr {
+      border: 1px solid #CADFEF;
+    }
+    thead, th {
+      border: none;
+    }
+
+    &.table>:not(:first-child) {
+      border: 1px solid #CADFEF;
+    }
+  }
+  @media (min-width: $desktop) {
+    &__filters {
+      margin-bottom: 20px;
+    }
+    &__search, &__download {
+      margin-bottom: 0;
+    }
+    &__download {
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  }
+}

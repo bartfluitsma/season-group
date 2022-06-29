@@ -1,0 +1,134 @@
+@use "../../theme/_global.scss"as *;
+@use "../../theme/theme.scss"as *;
+
+.keyTerms {
+  &__container {
+    &__filters {
+      width: calc(100vw - 25px);
+    }
+    &__title {
+      padding: 35px 0;
+      display: flex;
+      flex-direction: column;
+      .title-page {
+        @include title-page;
+      }
+    }
+  }
+  &__alphabet {
+    position: absolute;
+    right: 0;
+  }
+  &__search {
+    &__box {
+      margin-top: 40px;
+      padding: 0 20px;
+      border: 1px solid #DEDEDE;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      max-width: 300px;
+      height: 44px;
+      input {
+        border: none;
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: #DEDEDE;;
+          opacity: 1; /* Firefox */
+        }
+      }
+    }
+
+  }
+
+  &__row__letters {
+    min-height: 71px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    p {
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 20px;
+      margin: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__column__key {
+    p {
+      color: $primary;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 38px;
+    }
+  }
+  &__column__content {
+    margin-bottom: 40px;
+    padding-right: 6px;
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 24px;
+    }
+    p {
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 27px;
+      color: $text;
+    }
+  }
+  @media (min-width: $desktop) { 
+    &__container {
+      &__filters {
+        width: 600px;
+      }
+      &__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    &__search {
+      &__box {
+        margin-top: 40px;
+      }
+    }
+    &__alphabet {
+      position: relative;
+      border-bottom: 1px solid $primaryLight;
+      margin-bottom: 80px;
+    }
+    &__row__letters {
+      min-height: 71px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__column__key {
+      p {
+
+        font-size: 45px;
+        line-height: 57px;
+
+      }
+    }
+    &__column__content {
+      margin-bottom: 64px;
+      padding-right: 0;
+      h3 {
+        font-size: 28px;
+        line-height: 40px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 27px;
+      }
+    }
+  }
+}

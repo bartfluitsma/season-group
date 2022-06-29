@@ -1,0 +1,60 @@
+@use "../../../../theme/_global.scss"as *;
+@use "../../../../theme/theme.scss"as *;
+
+.benefits {
+  &__container {
+    padding: 40px 24px;
+    margin-bottom: 160px;
+    .page-subtitle {
+      @include subtitle-page;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    text-align: center;
+    margin-bottom: 54px;
+    &:last-child {
+      flex-grow: 1;
+    }
+    span {
+      display: inline-block;
+      color: $primary;
+      font-size: 80px;
+      letter-spacing: 0;
+      line-height: 88px;
+      text-align: center;
+      text-transform: lowercase;
+      margin-bottom: 8px;
+    }
+    p {
+      color: $auxText;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 24px;
+      text-align: center
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &__container {
+      padding: 0 0 80px 0;
+    }
+
+    &__list {
+      text-align: center;
+      margin-bottom: 0;
+
+      span {
+        color: $primary;
+        font-size: 120px;
+        line-height: 100px;
+        text-align: right;
+        text-transform: lowercase;
+        margin-bottom: 43px;
+      }
+
+    }
+
+  }
+}

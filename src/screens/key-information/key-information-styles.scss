@@ -1,0 +1,12 @@
+@use "../../theme/_global.scss" as *;
+@use "../../theme/theme.scss" as *;
+
+.KeyInformation {
+  &__container {
+    padding: 40px 24px;
+    .page-title {
+      @include title-page;
+      margin-bottom: 40px;
+    }
+  }
+}

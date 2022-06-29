@@ -1,0 +1,31 @@
+@use "../../../../theme/_global.scss" as *;
+@use "../../../../theme/theme.scss" as *;
+
+.cardPartners {
+  &__container {
+    margin-bottom: 48px;
+  }
+  &__logo {
+    background-color: $westar;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 143px;
+    margin-bottom: 30px;
+  }
+  &__content {
+    p {
+      color: $text;
+      font-family: Manrope;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 27px;
+    }
+  }
+  @media (min-width: $desktop) { 
+    &__container {
+      margin-bottom: 0;
+    }
+
+  }
+}

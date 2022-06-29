@@ -1,0 +1,141 @@
+@use "../../../../theme/_global.scss" as *;
+@use "../../../../theme/theme.scss" as *;
+
+.heroImage {
+  &__container {
+    padding: $gapTitlePage 25px 0;
+   
+    .appendix {
+      position: relative;
+      width: fit-content;
+      margin-bottom: 48px;
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        width: 112px;
+        height: 141px;
+        background-color: $primary;
+        bottom: -141px;
+        right: -112px;
+        border-top-right-radius: calc(66.6666 * 112px / 100);
+      }
+    }
+  }
+  &__block {
+    &__up {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__title {
+    @include title-page;
+    margin-bottom: 40px;
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    height: 223px;
+    width: 283px;
+    max-width: 283px;
+    border-top-right-radius: calc(66.6666 * 223px / 100);
+    img {
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__highlights {
+    padding-top: 51px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    h5 {
+      color: $text;
+      font-size: 18px;
+      letter-spacing: 0;
+      line-height: 30px;
+      margin-right: 50px;
+      margin-bottom: 24px;
+    }
+    p {
+      border-radius: 4px;
+      background-color: $westar;
+      padding: 4px 14px;
+      color: $auxText;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1.43px;
+      line-height: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+  }
+  @media (min-width: $desktop) {
+    &__container {
+      .appendix {
+        margin-bottom: 0;
+        width: 100%;
+        &::after {
+          width: 257px;
+          height: 326px;
+          bottom: -326px;
+          right: -257px;
+          border-top-right-radius: calc(66.6666 * 257px / 100);
+        }
+      }
+
+    }
+    &__block {
+      &__up {
+        flex-direction: row;
+      }
+    }
+    &__image {
+      height: 515px;
+      width: 100%;
+      max-width: 100%;
+      border-top-right-radius: calc(66.6666 * 515px / 100);
+      img {
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &__title {
+      margin-bottom: 52px;
+    }
+    &__highlights {
+      padding-top: 51px;
+      padding-bottom: 50px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      h5 {
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 30px;
+        margin-right: 50px;
+      }
+      p {
+        padding: 4px 14px;
+        font-size: 10px;
+        line-height: 20px;
+        margin-right: 30px;
+      }
+    }
+
+  }
+}

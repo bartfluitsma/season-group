@@ -1,0 +1,15 @@
+@use "../../../../theme/_global.scss" as *;
+@use "../../../../theme/theme.scss" as *;
+
+.ourApproach {
+  &__container {
+
+  }
+  &__title {
+    @include title-page;
+    margin-bottom: 100px;
+  }
+  &__tag {
+    @include tag-section;
+  }
+}

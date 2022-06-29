@@ -1,0 +1,20 @@
+@use "../../theme/_global.scss" as *;
+@use "../../theme/theme.scss" as *;
+
+.terms-and-conditions {
+  &__container {
+    padding: 0 25px;
+    margin: 0 auto;
+
+    .page-title {
+      @include title-page;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &__container {
+      width: 845px;
+    }
+  }
+}

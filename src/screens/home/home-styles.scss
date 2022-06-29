@@ -1,0 +1,15 @@
+@use "../../theme/_global.scss" as *;
+@use "../../theme/theme.scss" as *;
+
+.home {
+  &__container {
+    .slick-track {
+      // width: fit-content !important;
+    }
+  }
+
+  &__sliderOurMatter {
+    padding: 0 12px;
+    
+  }
+}

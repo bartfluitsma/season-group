@@ -1,0 +1,88 @@
+@use '../../theme/theme.scss'as *;
+
+.borderlessTable {
+  border: none;
+}
+
+table tr td {
+  text-align: center;
+}
+
+table tr td:first-child {
+  text-align: left;
+}
+
+.tbaleHeadBlue {
+  background-color: rgba(202, 223, 239, 0.17)
+}
+
+.tbaleHeadBlue td {
+  font-weight: bold;
+}
+
+.borderlessTable td:first-child {
+  padding-left:  35px;
+  
+}
+
+.borderlessTable tr:last-child td {
+  /* border: none; */
+  border-bottom: 1px solid #f2f !important;
+}
+
+.borderlessTableLast {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.borderlessTableLast td{
+  padding-bottom: 25px;
+}
+
+.borderlessTableFirst td {
+  padding-top: 25px;
+}
+
+
+.tdTitle  {
+  background-color: #ccc;
+}
+
+.tdClass  p{
+  font-weight: bold;
+  margin-bottom: 0;
+  
+}
+
+.tdTitle span {
+  font-weight: bold;
+}
+.table>:not(caption)>*>* {
+  padding: 20px;
+}
+
+.table>:not(caption) .trNoBorder {
+  border-width: 0;
+}
+.table>:not(caption) .trNoBorder.trBold {
+  font-weight: bold;
+}
+
+//.table>:not(caption) .trNoBorder td{
+//   padding: 10px 20px;
+// }
+.table>:not(:first-child) {
+  border-top: 1px solid rgb(222, 226, 230)
+}
+table>:not(caption) .trChildren {
+  border-top: 1px solid rgb(222, 226, 230);
+}
+.table>:not(caption) .trChildren td:nth-child(1),
+.table>:not(caption) .trNoBorder td:nth-child(1){
+   padding-left: 40px;
+}
+.table thead tr td {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: $primary;
+  font-weight: bold;
+  font-size: 12px;
+}

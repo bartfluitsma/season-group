@@ -1,0 +1,112 @@
+@use '../../theme/theme.scss'as *;
+
+@mixin  text-footer {
+  color: $text;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 24px;
+  font-weight: 400;
+}
+.footer-mobile {
+  &__container {
+    padding-top: 45px;
+  }
+}
+
+.footer {
+  &__container {
+    padding-top: 104px;
+
+  }
+
+  &__title {
+    @include text-footer;
+    color: $primary;
+    font-weight: bold;
+
+    &__group {
+      @include text-footer;
+      font-size: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+
+    }
+  }
+
+  &__bottom {
+    padding: 16px 0;
+    border-top: 1px solid $primaryLight;
+    span {
+      @include text-footer;
+      margin-left: 5px;
+
+    }
+  }
+
+  &__block {
+    margin-bottom: 48px;
+    p {
+      margin: 0;
+    }
+    h5 {
+      @include text-footer;
+      font-weight: bold;
+      color:$primary;
+      margin-bottom: 15px;
+    }
+    &__subgroup {
+      > div {
+        margin-bottom: 10px;
+
+      }
+      h6 {
+        @include text-footer;
+        font-size: 10px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+
+      }
+    }
+  }
+  &__address {
+    h5 {
+      @include text-footer;
+      color: $primary;
+      font-weight: bold;
+    }
+    h6 {
+      @include text-footer;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 10px;
+    }
+    p {
+      @include text-footer;
+    }
+  }
+  &__apps {
+    h5 {
+      @include text-footer;
+      color: $primary;
+      font-weight: bold;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      svg {
+        margin: 7px 0;
+      }
+    }
+  }
+  &__logo {
+    margin-bottom: 60px;
+  }
+  &__inquire {
+    margin: 30px 0 29px;
+  }
+  &__socialMedia {
+    margin: 0 0 81px;
+  }
+
+}

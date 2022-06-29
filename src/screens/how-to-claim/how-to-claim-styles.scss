@@ -1,0 +1,42 @@
+@use "../../theme/_global.scss" as *;
+@use "../../theme/theme.scss" as *;
+
+.howToClaim {
+  &__head {
+    margin-top: 36px;
+    .page-title {
+      @include title-page;
+      margin-bottom: 24px;
+    }
+    &__description {
+      max-width: 700px;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 27px;
+      margin-bottom: 81px;
+    }
+  }
+  &__card {
+    margin-bottom: 46px;
+    .cardOutline-title {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 40px;
+      color: $text;
+    }
+    span {
+      text-transform: uppercase;
+      color: $primary;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1.43px;
+      line-height: 20px;
+    }
+    ul li {
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 23.6px;
+    }
+  }
+}

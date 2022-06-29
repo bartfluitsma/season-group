@@ -1,0 +1,17 @@
+@use "../../../../theme/_global.scss" as *;
+@use "../../../../theme/theme.scss" as *;
+
+.premium {
+  &__container {
+    margin-bottom: 160px;
+    .page-subtitle {
+      @include subtitle-page;
+      margin-bottom: 56px;
+
+    }
+  }
+  
+  @media (min-width: $desktop) {
+   
+  }
+}

@@ -1,0 +1,12 @@
+.experienceRelated {
+  &__container {
+    .carouselCard__container {
+      padding: 0 0 160px 0;
+    }
+    .carouselCard__title {
+      span {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

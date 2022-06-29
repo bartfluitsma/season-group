@@ -1,0 +1,32 @@
+@use '../../theme/theme.scss'as *;
+
+.buttonBar {
+  &__container {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #CADFEF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    padding: 0 30px;
+    cursor: pointer;
+
+    p {
+      color: $auxText;
+      font-size: 18px;
+      letter-spacing: 0;
+      line-height: 30px;
+      margin: 0;
+    }
+    svg {
+      fill: $secondary;
+    }
+    &:hover {
+      background-color: $white;
+      box-shadow: 0 2px 20px 0 rgba(218,232,248,0.8);
+    }
+  }
+}
