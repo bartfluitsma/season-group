@@ -1,11 +1,11 @@
 const enHK = require('./en.json')
-const phPH = require('./ph.json')
+const chCH = require('./ch.json')
 
 module.exports = {
   en: {
     translation: enHK,
   },
-  ph: {
-    translation: phPH,
+  ch: {
+    translation: chCH,
   },
 }

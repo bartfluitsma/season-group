@@ -9,7 +9,7 @@ i18next
     fallbackLng: process.env.GATSBY_AVAILABLE_LOCALES.split(' '),
     resources: {
       ph: {
-        translations: require('./locales/ph.json'),
+        translations: require('./locales/ch.json'),
       },
       en: {
         translations: require('./locales/en.json'),
