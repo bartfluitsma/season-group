@@ -1,7 +1,12 @@
 @use "./theme.scss" as *;
 
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/gilroyBold.woff') format('woff'), url('../assets/fonts/gilroyBold.woff2') format('woff2')
+}
+
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 ul,
 li {
@@ -12,7 +17,6 @@ a {
   color: inherit;
 }
 
-
 .rich-text {
   h1,
   h2,
@@ -21,6 +25,7 @@ a {
     margin-bottom: 24px;
     color: $text;
     font-weight: bold;
+    font-family: 'Gilroy', sans-serif;
   }
   h1 {
     font-size: 52px;
