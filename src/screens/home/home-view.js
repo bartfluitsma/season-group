@@ -5,7 +5,6 @@ import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import { Seo } from '../../components'
 import './home-styles.scss'
 
-
 const HomeView = () => {
   const breakpoints = useBreakpoint()
   const { t, i18n } = useTranslation()

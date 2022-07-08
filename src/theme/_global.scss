@@ -1,9 +1,5 @@
 @use "./theme.scss" as *;
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url('../assets/fonts/gilroyBold.woff') format('woff'), url('../assets/fonts/gilroyBold.woff2') format('woff2')
-}
+@use "./typography" as *;
 
 body {
   font-family: "Inter", sans-serif;

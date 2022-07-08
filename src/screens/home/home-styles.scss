@@ -4,6 +4,9 @@
 
 .home {
   &__container {
+    h1 {
+      font-family: 'Gilroy';
+    }
     .slick-track {
       // width: fit-content !important;
     }
