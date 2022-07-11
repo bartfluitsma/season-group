@@ -1,8 +1,12 @@
 @use "../../theme/_global.scss" as *;
 @use "../../theme/theme.scss" as *;
 
+
 .home {
   &__container {
+    h1 {
+      font-family: 'Gilroy';
+    }
     .slick-track {
       // width: fit-content !important;
     }

@@ -1,16 +1,13 @@
 // Put the colors for your project
-
-$primary: #1c75bc;
-$secondary: #ff9124;
-$primaryLight: #cadfef;
-$text: #3b3b3b;
+$primary: #1B1E60;
+$secondary: #3BC6F4;
+$text: #131C34;
+$textLight: #484554; // used for smaller (bold) pieces of text
+$azure: #018AFF; // blue used for button & highlight links
+$azureLight: rgba(1,138,255,0.3); // button blue on hover
 $white: #ffffff;
 $black: #000000;
-$westar: #f9f9f9;
-$whiteSmoke: #d8d8d8;
-$auxText: #575757;
-$numberText: #C3C3C3;
-
+ 
 // break-points
 $mobile: 480px;
 $tablet: 764px;
@@ -18,6 +15,6 @@ $desktop: 1024px;
 $large: 1440px;
 
 //var
-$gapTitlePage: 35px;
+$gapTitlePage: 100px; // from bottom nav (220px from top)
+$maxTextWidth: 896px;
 
-$maxTextWidth: 844px;

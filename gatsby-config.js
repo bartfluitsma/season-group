@@ -52,7 +52,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-layout',
       options: {
-        component: `${__dirname}/src/components/layout/index.js`,
+        component: `${__dirname}/src/components/Layout/index.js`,
       },
     },
     {
