@@ -1,20 +1,26 @@
-@use "../../theme/_global.scss" as *;
+@use "../../theme/global.scss" as *;
 @use "../../theme/theme.scss" as *;
 
-.terms-and-conditions {
+.pages {
   &__container {
-    padding: 0 25px;
-    margin: 0 auto;
+    padding: 100px 0 200px 0;
+    margin: 0;
+    margin-left: $containerSidePadding;
 
     .page-title {
-      @include title-page;
-      margin-bottom: 40px;
+      @include title-pages;
+      padding-bottom: $gapTitlePage - 69px;
+    }
+
+    h4{
+      margin-bottom: 16px;
+      padding-top: 69px;
     }
   }
 
   @media (min-width: $desktop) {
     &__container {
-      width: 845px;
+      width: $maxTextWidth;
     }
   }
 }

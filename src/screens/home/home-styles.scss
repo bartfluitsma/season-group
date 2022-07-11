@@ -1,12 +1,10 @@
 @use "../../theme/_global.scss" as *;
 @use "../../theme/theme.scss" as *;
 
+// #TODO why does the homepage not take the h1 scss in consideration?
 
 .home {
   &__container {
-    h1 {
-      font-family: 'Gilroy';
-    }
     .slick-track {
       // width: fit-content !important;
     }

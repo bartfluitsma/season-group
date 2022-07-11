@@ -2,11 +2,11 @@
 
 .button {
   &__container {
-    height: 52px;
+    height: 54px;
     width:fit-content;
     min-width: 200px;
-    border-radius: 26px;
-    background-color: $secondary;
+    border-radius: 27.5px;
+    background-color: $azure;
     color: $white;
     display: flex;
     align-items: center;
@@ -16,9 +16,9 @@
       height: 52px;
       min-width: 152px;
       background-color: $white;
-      border: 1px solid $secondary;
+      border: 1px solid $azure;
       span {
-        color: $secondary;
+        color: $azure;
 
       }
     }
