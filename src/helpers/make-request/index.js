@@ -2,12 +2,6 @@
 import _ from 'lodash'
 import axios from 'axios'
 
-// const GATSBY_API_WORDPRESS = 'https://tam.wecreatelabs.com.hk/wp-json/wp/v2'
-// const GATSBY_API_WORDPRESS_CUSTOM = 'https://tam.wecreatelabs.com.hk/wp-json/custom/v2'
-
-// const GATSBY_API_WORDPRESS = 'https://reflections.wecreatelabs.com.hk/wp-json/wp/v2'
-// const GATSBY_API_WORDPRESS_CUSTOM = 'https://reflections.wecreatelabs.com.hk/wp-json/custom/v2'
-
 function makeRequest({
   headers,
   method,

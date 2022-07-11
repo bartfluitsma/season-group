@@ -1,5 +1,6 @@
 @use "./theme.scss" as *;
 @use "./typography" as *;
+@import "./mixin";
 
 body {
   font-family: "Inter", sans-serif;
@@ -17,18 +18,19 @@ a {
   } 
 }
 
-.rich-text {
+// #TODO rich text, if I place all in rich-text it doesn't link with the classname (pages for example)
+
   h1,
   h2,
   h3,
   h4 {
-    margin-bottom: 24px;
+    font-family: 'Gilroy', sans-serif;
     color: $primary;
     font-weight: bold;
-    font-family: 'Gilroy', sans-serif;
+    margin-bottom: 24px;
   }
   h1 {
-    font-size: 80px;
+    // font-size: 80px;
     line-height: 77px;
   }
   h2 {
@@ -38,7 +40,6 @@ a {
   }
   h3 {
     font-size: 34px;
-  font-weight: bold;
     line-height: 39px;
   }
   h4 {
@@ -73,159 +74,9 @@ a {
       }
     }
   }
-  // .wp-block-quote {
-  //   margin: 20px 0 20px 40px;
-  //   padding-left: 20px;
-  //   border-left: 1px solid #7b7b7b;
-  //   p {
-  //     color: $text;
-  //     font-size: 24px;
-  //     line-height: 32px;
-  //     font-weight: 400;
-  //   }
-  //   cite {
-  //     color: $text;
-  //     font-size: 18px;
-  //     line-height: 26px;
-  //     font-weight: 300;
-  //   }
-  // }
-
   a {
     color: $primary;  
     &:hover {
       color: $azure;
     } 
   }
-}
-
-// Page Not Found
-@mixin title-page {
-  color: $primary;
-  font-size: 40px;
-  line-height: 50px;
-  letter-spacing: 0;
-  font-weight: bold;
-  margin: 0;
-
-  @media (min-width: $desktop) {
-    font-size: 52px;
-    line-height: 63px;
-  }
-}
-@mixin subtitle-page {
-  color: $text;
-  font-size: 36px;
-  line-height: 44px;
-  letter-spacing: 0;
-  font-weight: bold;
-  margin: 0;
-
-  @media (min-width: $desktop) {
-    font-size: 45px;
-    line-height: 57px;
-  }
-}
-@mixin auxTitle-page {
-  color: $text;
-  font-size: 28px;
-  line-height: 38px;
-  letter-spacing: 0;
-  font-weight: bold;
-  margin: 0;
-
-  @media (min-width: $desktop) {
-    font-size: 28px;
-    line-height: 40px;
-  }
-}
-
-@mixin desc-page {
-  color: $text;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 27px;
-  font-weight: normal;
-  margin: 0;
-
-  @media (min-width: $desktop) {
-    font-size: 18px;
-    line-height: 30px;
-  }
-}
-
-@mixin tag-section {
-  color: $primary;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  line-height: 20px;
-  margin: 0;
-}
-
-@mixin appendix {
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 118px;
-    height: 149px;
-    border:1px solid $primaryLight;
-    left: -118px;
-    bottom: -149px;
-    border-top-left-radius: 200px;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 440px;
-    height: 550px;
-    border:1px solid $primaryLight;
-    top: -520px;
-    left: -310px;
-    border-bottom-right-radius: 300px;
-  }
-  @media (min-width: $desktop) {
-    &::before {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      width: 240px;
-      height: 300px;
-      border:1px solid $primaryLight;
-      bottom: -300px;
-      left: -240px;
-      border-top-left-radius: 200px;
-    }
-  }
-}
-@mixin appendixDown {
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 118px;
-    height: 149px;
-    border:1px solid $primaryLight;
-    left: -52px;
-    bottom: -149px;
-    border-top-left-radius: 200px;
-  }
-  @media (min-width: $desktop) {
-    &::before {
-      content: "";
-      z-index: 1;
-      position: absolute;
-      width: 240px;
-      height: 300px;
-      border:1px solid $primaryLight;
-      bottom: -300px;
-      left: -240px;
-      border-top-left-radius: 200px;
-    }
-  }
-}

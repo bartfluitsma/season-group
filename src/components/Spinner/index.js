@@ -7,7 +7,7 @@ const Spinner = ({ loading, height }) => {
     loading,
     size: 100,
     duration: 1,
-    color: '#1C75BC',
+    color: '#1C75BC', // #TODO change the color
   }
   return (
     <div className={styles.spinner__container}>
