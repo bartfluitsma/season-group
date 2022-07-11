@@ -3,6 +3,7 @@
 
 body {
   font-family: "Inter", sans-serif;
+  color: $text;
 }
 ul,
 li {
@@ -10,7 +11,10 @@ li {
 }
 a {
   text-decoration: none;
-  color: inherit;
+  color: $primary;
+  &:hover {
+    color: $azure;
+  } 
 }
 
 .rich-text {
@@ -19,31 +23,35 @@ a {
   h3,
   h4 {
     margin-bottom: 24px;
-    color: $text;
+    color: $primary;
     font-weight: bold;
     font-family: 'Gilroy', sans-serif;
   }
   h1 {
-    font-size: 52px;
-    line-height: 62px;
+    font-size: 80px;
+    line-height: 77px;
   }
   h2 {
-    font-size: 28px;
-    line-height: 40px;
+    font-size: 45px;
+    line-height: 52.5px;
     letter-spacing: 0;
   }
   h3 {
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 34px;
+  font-weight: bold;
+    line-height: 39px;
+  }
+  h4 {
+    font-size: 24px;
+    line-height: 29px;
   }
   p {
     color: $text;
     font-size: 16px;
     letter-spacing: 0;
-    line-height: 27px;
+    line-height: 30px;
     font-weight: normal;
     margin: 0;
-    margin-bottom: 24px;
   }
   ul,ol {
     padding-left: 40px;
@@ -84,13 +92,16 @@ a {
   // }
 
   a {
-    color: $primary;
+    color: $primary;  
+    &:hover {
+      color: $azure;
+    } 
   }
 }
 
 // Page Not Found
 @mixin title-page {
-  color: $text;
+  color: $primary;
   font-size: 40px;
   line-height: 50px;
   letter-spacing: 0;
