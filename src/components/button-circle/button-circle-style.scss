@@ -1,9 +1,9 @@
 @use '../../theme/theme.scss'as *;
 
-.button {
+.buttonCircle {
   &__container {
     height: 55px;
-    width:fit-content;
+    width: 55px;
     border-radius: 27.5px;
     background-color: $azure;
     color: $white;
@@ -11,15 +11,6 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-
-    &.fluid {
-      width: 100%;
-    }
-
-    a {
-      text-decoration: none;
-      color: $white;
-    }
 
     span {
       display: flex;
@@ -29,15 +20,34 @@
       line-height: 20px;
       text-align: center;
       color: $white;
-      padding: 0px 32px;
       svg{
-        margin-left: 20px;
         fill: $white;
+        margin: 17px;
       }
     }
 
     &.light{
       background-color: $azureLight;
+    }
+    &.darkArrow{
+      span svg {
+        fill: $azure;
+      }
+    }
+    &.transparent{
+      background-color: transparent;
+      border: 1px solid $azure;
+      svg{
+        fill: $azure;
+        margin: 17px;
+      }
+    }
+    &.white{
+      background-color: $white;
+      svg{
+        fill: $azure;
+        margin: 17px;
+      }
     }
 
   }
