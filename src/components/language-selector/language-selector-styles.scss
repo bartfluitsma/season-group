@@ -1,0 +1,17 @@
+@use '../../theme/theme.scss' as *;
+
+.language-selector {
+          background-color: transparent;
+          border: none;
+          font-weight: bold;
+          color: $primary;
+    
+          &:hover {
+            color: $azure;
+            cursor: pointer;
+          }
+          &__option{
+            
+          }
+        }
+

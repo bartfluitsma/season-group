@@ -13,6 +13,7 @@ li {
 a {
   text-decoration: none;
   color: $primary;
+  font-weight: bold;
   &:hover {
     color: $azure;
   } 
@@ -80,3 +81,4 @@ a {
       color: $azure;
     } 
   }
+  
