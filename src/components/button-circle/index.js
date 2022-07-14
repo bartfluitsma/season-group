@@ -2,25 +2,32 @@ import _ from 'lodash'
 import React from 'react'
 import { Link } from 'gatsby'
 import classNames from 'classnames'
-import './button-style.scss'
+import './button-circle-style.scss'
 import ArrowRight from '../../assets/seasongroup_icons_arrow-right.svg'
+import ArrowLeft from '../../assets/seasongroup_icons_arrow-left.svg'
 
-const Button = ({
-  text,
+const ButtonCircle = ({
   link,
   onClick,
   light,
+  leftArrow,
+  darkArrow,
+  transparent,
+  white,
 }) => {
-  const OnlyText = () => <span>{text}<ArrowRight width="17"/></span>
+  const OnlyText = () => <span>{!leftArrow ? <ArrowRight width="17"/> : <ArrowLeft width="17"/>}</span>
 
   const WidthLink = () => (
     <Link to={link}>
-      <span>{text}<ArrowRight width="17"/></span>
+      <span>{!leftArrow ? <ArrowRight width="17"/> : <ArrowLeft width="17"/>}</span>
     </Link>
   )
   const btnClass = classNames({
-    button__container: true,
+    buttonCircle__container: true,
     light,
+    darkArrow,
+    transparent,
+    white,
   })
 
   const handleOnClick = () => {
@@ -36,4 +43,4 @@ const Button = ({
   )
 }
 
-export default Button
+export default ButtonCircle
