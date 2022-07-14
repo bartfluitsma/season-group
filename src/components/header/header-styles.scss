@@ -1,11 +1,17 @@
 @use '../../theme/theme.scss' as *;
 
 .header {
+
+  &__logo {
+    svg {
+      min-height: 24px;
+      height: 3vh;
+    }
+  }
+
   &__container {
-    display: grid;
-    place-items: center;
-    height: 120px;
-    padding: 0 3.9vw;
+    height: 65px;
+    display: flex;
   }
 
   &__sub-container {
@@ -13,51 +19,161 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    position: relative;
+    padding: 15px;
   }
 
-  &__logo {
-    svg {
-      width: 9.7vw;
-    }
-  }
-
-  &__menu, &__sub-menu {
+  &__menu {
     ul {
-      display: flex;
-      align-items: center;
-    }
-  }
-  &__menu{
-    li {
-      margin-right: 4.2vw;
+      position: absolute;
+      top: 65px;
+      background-color: $white;
+      width: 100%;
+      left: 0;
+      margin: 0;
+      padding: 0 15px;
+      border-top: 1px solid #D3D3D3;
+      padding-top: 19px;
+      min-height: 100vh;
 
-      &:last-child {
-        margin-right: 0px;
+      li {
+        margin-bottom: 44px;
+
+        &:first-child {
+          margin-top: 3px;
+        }
+
+        &:nth-last-child(2) {
+          margin-bottom: 49px;
+        }
+
+        a {
+          font-size: 18px;
+        }
       }
     }
   }
-  &__sub-menu {
-    svg{
-        height: 19px;
-        margin: 0 2.5vw 0 1.8vw;
-        fill: $primary;
-     &:hover {
-      fill: $azure;
-      cursor: pointer;
-    }
-  } 
-}
 
-&__select{
-  select{
-    background-color: transparent;
-    border: none;
-    font-weight: bold;
-    color: $primary;
-    &:hover{
-      color: $azure;
-      cursor: pointer;
+  &__toggleClose {
+    @extend .header__menu;
+    
+    ul {
+      background-color: $white;
+      transform: translateY(-100%);
+      z-index: -1;
     }
-  } 
-}  
+  }
+
+  &__sub-menu {
+    svg {
+      height: 25px;
+      margin-right: 29px;
+      fill: $primary;
+
+      &:hover {
+        fill: $azure;
+        cursor: pointer;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+    }
+
+    .button__container {
+      display: none;
+    }
+  }
+
+  &__desktop {
+    display: none;
+  }
+
+
+  @media (min-width: $desktop) {
+    &__mobile {
+      display: none;
+    }
+
+    &__desktop {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__container {
+      display: grid;
+      place-items: center;
+      height: 120px;
+      padding: 0 3.9vw;
+    }
+
+    &__sub-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0;
+    }
+
+    &__logo {
+      svg {
+        height: 54px;
+      }
+    }
+
+    &__menu,
+    &__sub-menu {
+      ul {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__menu {
+
+      ul {
+        position: inherit;
+        margin: auto;
+        border-top: none;
+        padding-top: 0;
+        height: inherit;
+        min-height: inherit;
+        transform: translateY(0%);
+        
+        li {
+          margin-right: 4.2vw;
+          margin-bottom: 0;
+
+          &:first-child {
+            margin-top: 0;
+          }
+
+          &:nth-last-child(2) {
+            margin-right: 0px;
+            margin-bottom: 0px;
+          }
+
+          a {
+            font-size: inherit;
+          }
+        }
+      }
+    }
+
+    &__sub-menu {
+      svg {
+        height: 19px;
+        margin-left: 24px;
+      }
+
+      .button__container {
+        display: inherit;
+      }
+    }
+  }
+
 }

@@ -1,0 +1,31 @@
+@use '../../../../theme/theme.scss' as *;
+
+.hamburger{
+    &:hover{
+        cursor: pointer;
+    }
+        &__line{
+            height: 3px;
+            width: 30px;
+            background-color: $primary;
+            transition: all 0.3s ease;
+            &:first-child{
+                margin-bottom: 5px;
+            }
+            &:last-child{
+                margin-top: 5px;
+            }
+    }
+    &__line1{
+        @extend .hamburger__line;
+        transform: rotate(-45deg) translate(0px, 6px);
+    }
+    &__line3{
+        @extend .hamburger__line;
+        transform: rotate(45deg) translate(0px, -6px);
+    }
+
+    @media (min-width: $desktop) {
+        display: none;
+    }
+}

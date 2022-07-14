@@ -1,0 +1,51 @@
+@use '../../../../theme/theme.scss' as *;
+
+.MobileBottomMenu{
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        margin-top: 43.5px;
+    }
+
+    &__socialIconsContainer{
+        display: flex;
+
+        svg{
+            fill: $azure;
+        }
+        .icons-youtube {
+            height: 12px;
+            width: 17px;
+          }
+          .icons-facebook {
+            height: 18px;
+            width: 7.71px;
+          }
+          .icons-linkedin {
+            height: 14px;
+            width: 15px;
+          }
+        .icon-circle{
+            width: 41px;
+            height: 41px;
+            border: 1px $azure solid;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+        }
+        a{
+            &:first-child{
+                margin-right: 15px;
+            }
+            &:last-child{
+                margin-left: 15px;
+            }
+        }
+        
+    }
+
+    @media (min-width: $desktop) {
+        display: none;
+    }
+}
