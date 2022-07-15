@@ -1,17 +1,18 @@
 // pages 
 @mixin title-pages {
     color: $primary;
-    font-size: 40px; // #TODO mobile
-    line-height: 77px; // #TODO mobile
+    font-size: 55px; // #TODO mobile
+    line-height: 68px; // #TODO mobile
     letter-spacing: 0;
     font-weight: bold;
     margin: 0;
-    padding-bottom: $gapTitlePage;
+    padding-bottom: $gapTitlePageMobile;
   
     @media (min-width: $desktop) {
       font-size: 80px;
       line-height: 77px;
       margin: 0;
+      padding-bottom: $gapTitlePage;
     }
   }
   

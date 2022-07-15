@@ -1,3 +1,3 @@
-import HomePage from '../screens/home'
+import HomeView from '../screens/home'
 
-export default HomePage
+export default HomeView
