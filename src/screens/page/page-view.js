@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import React from 'react'
 import { Spinner } from '../../components'
+import GradientBanner from '../../components/gradient-banner'
 import './page-views-styles.scss'
 
 // const Text = ({ className, text }) => (
@@ -29,6 +30,7 @@ const PageView = ({
         <p className="rich-text">{FakeText}</p>
         {/* <Text text={_.get(data, 'content.rendered')} className="rich-text" /> */}
       </div>
+      <GradientBanner />
     </>
   )
 }

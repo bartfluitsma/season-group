@@ -6,6 +6,7 @@
     svg {
       min-height: 24px;
       height: 3vh;
+      padding: 1px;
     }
   }
 
@@ -64,7 +65,7 @@
     }
   }
 
-  &__sub-menu {
+  &__search{
     svg {
       height: 25px;
       margin-right: 29px;
@@ -75,7 +76,10 @@
         cursor: pointer;
       }
     }
+  }
 
+  &__sub-menu {
+    
     ul {
       display: flex;
       align-items: center;

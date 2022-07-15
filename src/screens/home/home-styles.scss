@@ -5,13 +5,19 @@
 
 .home {
   &__container {
-    .slick-track {
-      // width: fit-content !important;
+    margin: 90px $containerSidePaddingMobile 0 $containerSidePaddingMobile;
+    .page-title {
+      @include title-pages;
     }
   }
 
-  &__sliderOurMatter {
-    padding: 0 12px;
-    
+  @media (min-width: $desktop) {
+    &__container {
+      width: $maxTextWidth;
+      margin: 100px $containerSidePadding 0 $containerSidePadding;
+    } 
+    .page-title {
+      @include title-pages;
+    }
   }
 }

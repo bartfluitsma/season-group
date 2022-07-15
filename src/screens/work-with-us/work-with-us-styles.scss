@@ -1,18 +1,11 @@
-@use "../../theme/global.scss" as *;
+@use "../../theme/_global.scss" as *;
 @use "../../theme/theme.scss" as *;
 
-.pages {
+.workWithUs {
   &__container {
     margin: 90px $containerSidePaddingMobile 0 $containerSidePaddingMobile;
-
     .page-title {
       @include title-pages;
-      padding-bottom: 0;
-    }
-
-    h4{
-      margin-bottom: 16px;
-      padding-top: 60px;
     }
   }
 
@@ -20,19 +13,9 @@
     &__container {
       width: $maxTextWidth;
       margin: 100px $containerSidePadding 0 $containerSidePadding;
-    
-      h4{
-        padding-top: 69px;
-        &:first-of-type{
-          padding-top: 0px;
-        }
-      }
-    }
-    
+    } 
     .page-title {
       @include title-pages;
     }
-    
-
   }
 }
