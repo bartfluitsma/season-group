@@ -1,7 +1,8 @@
 {
   "home":{
-    "title": "Homepage",
-    "description": "Nisi veniam nulla sint officia veniam aute. Ad non sit irure reprehenderit sint. Aliqua anim adipisicing ea commodo Lorem dolor qui sunt enim. Incididunt veniam veniam nisi proident amet do dolore minim fugiat aute qui."
+    "heroTitle": "Global <1><0>{{vertical}}</0></1> Together",
+    "bannerCTA": "Ready to <1><0>{{produce}}</0></1><br /> an impact?",
+    "our-mission-title": "Improve world's living standard through <1><0>{{innovative}}</0></1> product development."
   },
   "top-menu": {
     "services": "Services",
@@ -10,6 +11,12 @@
     "news": "News",
     "insights": "Insights",
     "work-with-us": "Work with us"
+  },
+  "tagline":{
+    "our-mission": "Our mission"
+  },
+  "buttons":{
+    "learn-about-us": "Learn about us"
   },
   "footer-menu": {
     "copyright": "All rights reserved © 2022 Season Group",

@@ -1,0 +1,34 @@
+@use '../../theme/theme.scss' as *;
+
+.title-text-block {
+
+  &__container {
+    padding-bottom: 130px;
+
+    h2 {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__descr {
+    p{
+      margin-bottom: 32px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+
+    &__container {
+      padding-bottom: 0px;
+
+      h2 {
+        max-width: 693px;
+      }
+    }
+
+    &__descr {
+      max-width: 694px;
+      margin: auto 0 45px auto;
+    }
+  }
+}
