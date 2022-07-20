@@ -19,6 +19,10 @@ a {
   } 
 }
 
+.title-color{
+  color: $secondary;
+}
+
 // #TODO rich text, if I place all in rich-text it doesn't link with the classname (pages for example)
 
   h1,
@@ -54,6 +58,8 @@ a {
     line-height: 30px;
     font-weight: normal;
     margin: 0;
+    font-family: "Inter", sans-serif;  
+    color: $text;
   }
   ul,ol {
     padding-left: 40px;

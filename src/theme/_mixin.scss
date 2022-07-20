@@ -29,20 +29,7 @@
       line-height: 57px;
     }
   }
-  @mixin auxTitle-page {
-    color: $text;
-    font-size: 28px;
-    line-height: 38px;
-    letter-spacing: 0;
-    font-weight: bold;
-    margin: 0;
-  
-    @media (min-width: $desktop) {
-      font-size: 28px;
-      line-height: 40px;
-    }
-  }
-  
+
   @mixin desc-page {
     color: $text;
     font-size: 16px;

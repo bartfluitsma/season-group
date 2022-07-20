@@ -1,0 +1,35 @@
+@use '../../theme/theme.scss' as *;
+
+.bannerCTA {
+  margin: 125px -15px auto -15px;
+  padding: 0px 15px 226px 15px;
+  background-image: url('../../assets/images/seasongroup_contact_us.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__container{
+    h1{
+      margin-bottom: 48px;
+    }
+  }
+
+  &__title-color {
+    color: $secondary;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 118px -120px auto -120px;
+    padding: 0px 120px 254px 120px;
+    background-position: right;
+
+    &__container{
+      h1{
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+
+  
+}

@@ -13,7 +13,6 @@
 
   @media (min-width: $desktop) {
     &__container {
-      width: $maxTextWidth;
       margin: 100px $containerSidePadding 0 $containerSidePadding;
     } 
     .page-title {
