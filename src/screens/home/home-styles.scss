@@ -11,12 +11,29 @@
     }
   }
 
+  &__numbers{
+    background-image: url('../../assets/images/seasongroup_bg_curve.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
   @media (min-width: $desktop) {
     &__container {
       margin: 100px $containerSidePadding 0 $containerSidePadding;
     } 
     .page-title {
       @include title-pages;
+    }
+
+    &__numbers{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto -120px;
+      height: 651px;
+    background-position: center;
     }
   }
 }

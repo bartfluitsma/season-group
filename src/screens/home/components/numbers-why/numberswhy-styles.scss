@@ -1,0 +1,41 @@
+@use '../../../../theme/theme.scss' as *;
+@use "../../../../theme/_global.scss" as *;
+
+.numberswhy {
+
+    &__container{
+      padding: 0 56px 60px 56px;
+      &:last-of-type{
+        padding-bottom: 150px;
+      }
+    }
+
+    &__number {
+      color: $primary;
+      font-family: $title;
+      font-size: 75px;
+      font-weight: bold;
+      line-height: 93px;
+  }
+
+  &__descr{
+    p{
+      color: $textLight;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &__container{
+      padding: 0;
+      &:last-of-type{
+        padding-bottom: 0px;
+      }
+      &:nth-of-type(2){
+        padding: 0 10.8vw
+      }
+    }
+  }
+}
