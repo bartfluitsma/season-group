@@ -45,7 +45,9 @@ const HomeView = ({ data, loading }) => {
 
             // numbers why
             case layouts.acf_fc_layout === 'numbers':
-              layout = <p key={idx}>Numbers: {layouts.acf_fc_layout}</p>
+              layout = <div className='home__numbers'>
+                {layouts.list.map((number, i) => <NumbersWhy key={i} number={number.number} descr={number.description} />)}
+              </div>
               break
 
             // why partner with us

@@ -35,10 +35,16 @@
     margin: auto -15px auto auto;
     background-color: $azure;
     box-shadow: 10px 10px 60px 0 rgba(154, 154, 154, 0.61);
+    // background-image: url('');
+    // background-size: cover;
+    // background-position: center;
   }
 
   &__secondImage {
     display: block;
+    // background-image: url('');
+    // background-size: cover;
+    // background-position: center;
     width: 180px;
     height: 243px;
     margin-left: -15px;
@@ -156,103 +162,3 @@
 
   }
 }
-
-
-// .hero {
-
-
-//   &__container {
-//     h1 {
-//       width: 240px;
-//       margin: auto;
-//       line-height: 52px;
-//       margin-bottom: 77px;
-//     }
-
-//     .dots{
-//       height: 500px;
-//       width: 500px;
-//       background-image: url('../../../../assets/images/seasongroup_bg_dot.png');
-//       background-size: contain;
-//       position: absolute;
-//       right: -250px;
-//       bottom: 150px;
-//       z-index: -1;
-//     }
-//   }
-
-//   &__road-image {
-//     display: block;
-//     width: 180px;
-//     height: 243px;
-//     margin-left: -15px;
-//     margin-bottom: 60px;
-//     background-color: $azure;
-//     box-shadow: 10px 10px 60px 0 rgba(154,154,154,0.61);
-//   }
-
-//   &__button-image {
-//     width: 334px;
-//     height: 452px;
-//     background-color: $azure;
-//     margin: auto -15px 149px auto;
-//     box-shadow: 10px 10px 60px 0 rgba(154,154,154,0.61);
-//   }
-
-//   &__subcontainer {
-//     display: flex;
-//     justify-content: space-between;
-
-//     .scroll-container {
-//       height: 243px;
-//       width: 100px;
-//       position: relative;
-
-//       .scroll {
-//         position: absolute;
-//         height: 30px;
-//         bottom: 52px;
-//         left: 18px;
-//         display: flex;
-//         align-items: center;
-//         transform: rotate(-270deg);
-
-//         p {
-//           padding-left: 10px;
-//           font-family: $textFont;
-//           color: $primary;
-//         }
-//       }
-
-//       .line {
-//         height: 1px;
-//         width: 86px;
-//         background-color: $primary;
-//       }
-//     }
-//   }
-
-//   &__title-color {
-//     color: $secondary;
-//     float: right;
-//   }
-
-//   @media (min-width: $desktop) {
-
-//     &__container{
-//       display: flex;
-//       h1 {
-//         width: 350px;
-//         line-height: 77px;
-//         margin-bottom: 77px;
-//       }
-//     }
-
-//     &__road-image {
-//       width: 39.5vw;
-//       height: 110vh;
-//       background-color: $azure;
-//     }
-//   }
-
-// }
