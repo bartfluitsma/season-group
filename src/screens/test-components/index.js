@@ -1,8 +1,10 @@
 import * as React from 'react'
 import Button from '../../components/button'
 import ButtonCircle from '../../components/button-circle'
+// import Carousel from '../../components/carousel'
 import { withTrans } from '../../i18n/withTrans'
 import './test-components.scss'
+
 
 const TestComponents = ({ t }) => (
   <>
@@ -17,6 +19,10 @@ const TestComponents = ({ t }) => (
       <ButtonCircle leftArrow={true} light={true} />
       <ButtonCircle transparent={true} />
       <ButtonCircle white={true} />
+
+      <div>
+        {/* <Carousel /> */}
+      </div>
     </div>
   </>
 )

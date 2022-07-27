@@ -19,21 +19,67 @@
     margin-right: -15px;
   }
 
+  &__industriesContainer{
+    margin-bottom: 200px;
+    .largeTitle{
+      margin-bottom: 42px;
+    }
+  }
+  
+  &__whatWeOfferContainer{
+    position: relative;
+  }
+
   @media (min-width: $desktop) {
+    &__industriesContainer{
+      .largeTitle{
+        margin-bottom: 78px;
+      }
+    }
+
+    &__industriesSubcontainer{
+      display: grid;
+      column-gap: 40px;
+      grid-template-columns: repeat( 2, minmax(250px, 1fr) );
+    } 
+    
     &__container {
       margin: 100px $containerSidePadding 0 $containerSidePadding;
     } 
     .page-title {
       @include title-pages;
     }
-
+    
     &__numbers{
       display: flex;
       justify-content: center;
       align-items: center;
       margin: auto -120px;
       height: 651px;
-    background-position: center;
+      background-position: center;
     }
+  
+    &__whatWeOfferDots{
+    background-image: url('../../assets/images/seasongroup_bg_dot.png');
+      height: 600px;
+      width: 700px;
+      background-size: cover;
+      position: absolute;
+      right: -30vw;
+      top: -150px;
+      z-index: -1;
+    }
+
+    &__industriesDots{
+      background-image: url('../../assets/images/seasongroup_bg_dot.png');
+        height: 600px;
+        width: 700px;
+        background-size: cover;
+        position: absolute;
+        right: -30vw;
+        top: -300px;
+        z-index: -1;
+      }
   }
+
 }

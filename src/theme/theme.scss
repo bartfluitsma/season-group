@@ -7,6 +7,7 @@ $azure: #018AFF; // blue used for button & highlight links
 $azureLight: rgba(1,138,255,0.3); // button blue on hover
 $white: #ffffff;
 $black: #000000;
+$darkBlue: #273A59;
  
 // break-points
 $mobile: 480px;
@@ -24,4 +25,8 @@ $containerSidePaddingMobile: 15px;
 // fonts
 $title: 'Gilroy', sans-serif;
 $textFont: 'Inter', sans-serif;
+
+// miscellaneous 
+$boxShadow: 10px 10px 60px 0 rgba(154, 154, 154, 0.61);
+
 

@@ -1,0 +1,81 @@
+@use '../../theme/theme.scss' as *;
+@use "../../theme/_global.scss" as *;
+
+.carousel {
+
+  &__container{
+    margin-bottom: 200px;
+  }
+
+  &__tagline {
+    padding-bottom: 55px;
+  }
+
+  &__line {
+    height: 2px;
+    width: 50%;
+    background-color: $azure;
+    position: absolute;
+    margin-top: -2px;
+  }
+
+  &__lineBackground{
+    height: 2px;
+    width: 164px;
+    background-color: #D3D3D3;
+  }
+
+  &__loadingLine {
+    position: absolute;
+    top: -25px;
+    left: 0;
+  }
+
+  &__box {
+    position: relative;
+    padding-bottom: 0;
+
+    .slick-track {
+      padding: 40px 0;
+      display: flex;
+      align-items: stretch;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: -50px;
+  }
+
+  &__leftArrow {
+    right: 70px;
+  }
+
+  &__rightArrow {
+    right: 0;
+  }
+
+  &__count {
+    display: none;
+  }
+
+  @media (min-width: $desktop) {
+    &__container {
+      margin: 0px 0 240px 0;
+    }
+
+
+    &__tagline {
+      padding-bottom: 0;
+      margin-top: 20px ;
+      margin-bottom: -20px;
+    }
+
+    &__loadingLine {
+      position: absolute;
+      top: -23px;
+      right: 11vw;
+      left: auto;
+    }
+  }
+}

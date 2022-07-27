@@ -1,0 +1,76 @@
+@use '../../../theme/theme.scss'as *;
+@use "../../../theme/_global.scss" as *;
+
+.clientsCard {
+  &__container {
+    background-color: $darkBlue;
+    margin: 1px;
+    margin-top: 25px;
+    p{ 
+      font-size: 17px;
+      // margin-right: 24px;
+      max-height: 220px;
+      overflow: hidden;
+      text-overflow: ellipsis " [..]";
+    }
+    p, h4{
+      padding-right: 10px;
+    }
+  }
+
+  &__subcontainer{
+    display: grid;
+    place-items: center;
+    .__descr{
+      padding: 28px 23px;
+      color: $white;
+      h4{
+        margin-top: 32px;
+        color: $white;
+      }
+      .__companyNameText{
+        color: $secondary;
+        margin-top: 16px;
+      }
+   }
+   img{
+    width: 100%;
+   }
+  }
+
+  &__imageContainer{
+      width: 100%;
+  }
+
+    @media (min-width: $desktop) {
+      &__container {
+        background-color: $darkBlue;
+        margin: 1px;
+        margin-top: 25px;
+        font-size: 17px;
+        h4{
+          font-size: 34px;
+          line-height: 39px;
+          font-weight: bold;
+        }
+      }
+      
+      &__subcontainer{
+        display: flex;
+        .__descr{
+          padding: 55px;
+          width: 130%;
+        }
+      }
+
+      &__imageContainer{
+        width: 100%;
+        height: fit-content;
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+    }
+}
