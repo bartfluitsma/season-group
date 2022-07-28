@@ -1,6 +1,6 @@
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import _ from 'lodash'
-import React, { useState } from 'react'
+import React, { Children, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Slider from 'react-slick'
 import ButtonCircle from '../button-circle'
@@ -15,7 +15,7 @@ const Carousel = ({
   // tag,
   // title,
   // parentLink,
-  // children
+  children,
   inner,
   arrows,
   data,
@@ -95,9 +95,6 @@ const Carousel = ({
   }
   return (
     <div className="carousel__container">
-      <div className="carousel__tagline">
-        <Tagline text={t('tagline.our-work')} />
-      </div>
       <div className='carousel__box'>
         <div className="carousel__loadingLine">
           <div className='carousel__lineBackground'></div>
@@ -107,22 +104,7 @@ const Carousel = ({
           <div>
             <Slider
               {...settings}>
-              {data.map((work, i) => <div key={i}>
-                <ShowcaseCard
-                  imageUrl={work.image.url}
-                  imageAlt={work.image.alt}
-                  title={work.title}
-                  descr={work.content}
-                />
-              </div>)}
-              {data.map((work, i) => <div key={i}>
-                <ShowcaseCard
-                  imageUrl={work.image.url}
-                  imageAlt={work.image.alt}
-                  title={work.title}
-                  descr={work.content}
-                />
-              </div>)}
+              {children}
             </Slider>
           </div>
         </div>
