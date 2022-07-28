@@ -1,0 +1,78 @@
+@use '../../../../theme/theme.scss' as *;
+@use "../../../../theme/_global.scss" as *;
+
+.whypartner {
+
+  &__main-image {
+    height: 390px;
+    width: 334px;
+    margin: 80px auto 62px -15px;
+    background-color: red;
+    box-shadow: $boxShadow;
+  }
+
+  &__reasons {
+    display: flex;
+    margin-bottom: 62px;
+
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__icon {
+    margin-right: 42.5px;
+
+    svg {
+      height: 51px;
+      width: 54px;
+      opacity: 0.5;
+      color: $primary;
+    }
+  }
+
+  @media (min-width: $desktop) {
+
+    &__subcontainer {
+      margin-top: 130px;
+      display: flex;
+      // height: 802px;
+      // overflow:visible;
+      // position: relative;
+    }
+
+    &__main-image {
+      height: 592px;
+      width: 507px;
+      margin: 0 74px auto -60px;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      align-self: flex-start
+        }
+
+    &__reasons {
+      width: 679px;
+    }
+
+    &__icon {
+      margin-right: 84.5px;
+    }
+
+    &__reasons-container{
+      padding-top: 112px;
+        }
+
+    &__title-text-container{
+      display: flex;
+      align-items: flex-start;
+      h3{
+        width: 247.05px;
+      }
+      div{
+        width: 253px;
+        margin-left: 31px;
+      }
+    }
+  }
+}

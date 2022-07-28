@@ -1,0 +1,25 @@
+@use '../../../theme/theme.scss'as *;
+@use "../../../theme/_global.scss" as *;
+
+.showcaseCard {
+  &__container {
+    max-width: 275px;
+    margin-top: 25px;
+    margin-right: 20px;
+    p{ 
+      font-size: 17px;
+      // margin-right: 24px;
+    }
+    p, h4{
+      padding-right: 10px;
+    }
+  }
+
+  &__imageContainer{
+    img{
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+
+}

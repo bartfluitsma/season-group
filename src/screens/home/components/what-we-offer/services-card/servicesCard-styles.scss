@@ -1,0 +1,131 @@
+@use '../../../../../theme/theme.scss' as *;
+@use "../../../../../theme/_global.scss" as *;
+
+.servicesCard {
+  &__text-container {
+    margin-bottom: 60px;
+
+    h3 {
+      margin-bottom: 16px;
+    }
+
+    div:first-of-type {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__firstImage {
+    width: 336px;
+    height: 425px;
+    box-shadow: $boxShadow;
+    margin: auto 0px 60px -15px;
+  }
+
+  &__secondImage {
+    width: 100%;
+    display: flex;
+
+    img {
+      align-items: flex-end;
+      width: 240px;
+      height: 173px;
+      margin-right: 0;
+      margin-left: auto;
+      margin: auto 0 102px auto;
+      box-shadow: $boxShadow;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &__container {
+      display: flex;
+      margin-top: 130px;
+    }
+
+    &__firstImage {
+      width: 604px;
+      height: 764px;
+      margin: 0 11vw 60px -5vw;
+    }
+
+    &__text-container {
+      margin-bottom: 60px;
+      padding-top: 96px;
+
+      h3 {
+        margin-bottom: 16px;
+      }
+
+      div:first-of-type {
+        margin-bottom: 32px;
+        width: 33vw;
+      }
+    }
+
+    &__secondImage {
+      img {
+        align-items: flex-end;
+        width: 399px;
+        height: 288px;
+        margin-right: 0;
+        margin-left: auto;
+        margin: 200px -10vw 0 auto;
+        box-shadow: $boxShadow;
+      }
+    }
+
+  }
+}
+
+.oppositeCard {
+  .servicesCard__text-container {
+    max-width: 274px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .servicesCard__secondImage {
+    width: 182px;
+
+    img {
+      width: 182px;
+      height: 252px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row-reverse;
+
+    .servicesCard__firstImage {
+      width: 716px;
+      margin: 0;
+      margin-right: -5vw;
+
+      img {
+        width: 716px;
+        height: 744px;
+      }
+    }
+
+    .servicesCard__text-container {
+      max-width: none;
+    }
+
+    .servicesCard__information {
+      width: 100%;
+    }
+
+    .servicesCard__secondImage {
+      width: 274px;
+  
+      img {
+        width: 274px;
+        height: 379px;
+        margin-top: 185px;
+        align-items: flex-start;
+        margin-right: auto;
+        margin-left: -5vw;
+      }
+    }
+  }
+}

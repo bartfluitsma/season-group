@@ -107,3 +107,7 @@ a {
       line-height: 29px;
     }
   }
+
+  .largeTitle{
+    @extend h1
+  }

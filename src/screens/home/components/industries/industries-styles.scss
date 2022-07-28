@@ -1,0 +1,44 @@
+@use '../../../../theme/theme.scss' as *;
+@use "../../../../theme/_global.scss" as *;
+
+.industries {
+
+  &__container{
+    &:hover{
+      background-color: #F5F7FF;
+      box-shadow: 10px 10px 30px 0 rgba(154,154,154,0.2);
+    }
+  }
+  &__subcontainer{
+    cursor: pointer;
+    padding: 30px 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-bottom: 1px solid #D3D3D3;
+    
+    h3{
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+    &:hover{
+      border: none;
+      margin-top: -1px;
+      margin-bottom: 2px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &__container{
+      &:hover{
+        margin-top: -1px;
+      }
+    }
+
+    &__subcontainer{
+      padding: 30px 3vw;
+    }
+  }
+
+}

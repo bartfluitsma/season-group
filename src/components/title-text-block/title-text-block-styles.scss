@@ -11,7 +11,7 @@
   }
 
   &__descr {
-    p{
+    div:first-of-type{
       margin-bottom: 32px;
     }
   }

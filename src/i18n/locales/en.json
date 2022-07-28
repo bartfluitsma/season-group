@@ -2,7 +2,10 @@
   "home":{
     "heroTitle": "Global <1><0>{{vertical}}</0></1> Together",
     "bannerCTA": "Ready to <1><0>{{produce}}</0></1><br /> an impact?",
-    "our-mission-title": "Improve world's living standard through <1><0>{{innovative}}</0></1> product development."
+    "our-mission-title": "Improve world's living standard through <1><0>{{innovative}}</0></1> product development.",
+    "partner-with-us": "Why <1><0>{{partner}}</0></1> <br /> with us",
+    "what-we-offer": "What we <br /><1><0>{{offer}}</0></1>",
+    "who-we-serve": "Who we <br /><1><0>{{serve}}</0></1>"
   },
   "top-menu": {
     "services": "Services",
@@ -13,7 +16,12 @@
     "work-with-us": "Work with us"
   },
   "tagline":{
-    "our-mission": "Our mission"
+    "our-mission": "Our mission",
+    "our-strengths": "Our strengths",
+    "our-services": "Our services",
+    "industries": "Industries",
+    "our-work": "Our work",
+    "our-clients": "Our clients"
   },
   "buttons":{
     "learn-about-us": "Learn about us"

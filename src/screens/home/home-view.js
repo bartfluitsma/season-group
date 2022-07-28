@@ -8,6 +8,12 @@ import BannerCTA from '../../components/banner-CTA'
 import NumbersWhy from './components/numbers-why'
 import HeroHomePage from './components/hero'
 import TitleTextBlock from '../../components/title-text-block'
+import WhyPartner from './components/why-partner'
+import WhatWeOffer from './components/what-we-offer'
+import IndustriesHome from './components/industries'
+import Tagline from '../../components/tagline'
+import Carousel from '../../components/carousel'
+import ClientsCarousel from '../../components/carousel-clients'
 
 const HomeView = ({ data, loading }) => {
   const breakpoints = useBreakpoint()
@@ -52,27 +58,41 @@ const HomeView = ({ data, loading }) => {
 
             // why partner with us
             case layouts.acf_fc_layout === 'image_numbered_blocks':
-              layout = <p key={idx}>Why partner with us: {layouts.acf_fc_layout}</p>
+              layout = <div className='home__why-partner'>
+                <WhyPartner key={idx} data={layouts.list} />
+              </div>
               break
 
-            // what we offer; multiple components switching layout right/left
+            // our services; multiple components switching layout right/left
             case layouts.acf_fc_layout === 'info_blocks_list':
-              layout = <p key={idx}>What we offer: {layouts.acf_fc_layout}</p>
+              layout = <div className='home__whatWeOfferContainer'><div className='home__whatWeOfferDots'></div><WhatWeOffer data={layouts} /></div>
               break
 
             // industries list; do we take it in like this or via industries page?
             case layouts.acf_fc_layout === 'industries_list':
-              layout = <p key={idx}>Industries: {layouts.acf_fc_layout}</p>
+              layout = <div className='home__industriesContainer'>
+                <div className='home__whatWeOfferContainer'><div className='home__industriesDots'></div>
+                  <Tagline text={t('tagline.industries')} />
+                  <div className="largeTitle">
+                    <Trans i18nKey='home.who-we-serve'>
+                    Who we <span className='title-color'>{{ serve: 'serve' }}</span>
+                    </Trans>
+                  </div>
+                  <div className="home__industriesSubcontainer">
+                    {layouts.list.map((industries, i) => <IndustriesHome key={i} title={industries.title} />)}
+                  </div>
+                </div>
+              </div>
               break
 
             // our work
             case layouts.acf_fc_layout === 'case_studies_list':
-              layout = <p key={idx}>Our work: {layouts.acf_fc_layout}</p>
+              layout = <Carousel data={layouts.list} />
               break
 
             // clients
             case layouts.acf_fc_layout === 'clients':
-              layout = <p key={idx}>Clients: {layouts.acf_fc_layout}</p>
+              layout = <ClientsCarousel data={layouts.list} />
               break
 
             default:
