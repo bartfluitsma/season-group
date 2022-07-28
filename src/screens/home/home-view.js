@@ -14,6 +14,8 @@ import IndustriesHome from './components/industries'
 import Tagline from '../../components/tagline'
 import Carousel from '../../components/carousel'
 import ClientsCarousel from '../../components/carousel-clients'
+import ShowcaseCard from '../../components/carousel/showcase-card'
+import ClientsCard from '../../components/carousel-clients/clients-card'
 
 const HomeView = ({ data, loading }) => {
   const breakpoints = useBreakpoint()
@@ -75,7 +77,7 @@ const HomeView = ({ data, loading }) => {
                   <Tagline text={t('tagline.industries')} />
                   <div className="largeTitle">
                     <Trans i18nKey='home.who-we-serve'>
-                    Who we <span className='title-color'>{{ serve: 'serve' }}</span>
+                      Who we <span className='title-color'>{{ serve: 'serve' }}</span>
                     </Trans>
                   </div>
                   <div className="home__industriesSubcontainer">
@@ -87,12 +89,35 @@ const HomeView = ({ data, loading }) => {
 
             // our work
             case layouts.acf_fc_layout === 'case_studies_list':
-              layout = <Carousel data={layouts.list} />
+              layout = <div>
+                <div className="carousel__tagline">
+                  <Tagline text={t('tagline.our-work')} />
+                </div>
+                <Carousel data={layouts.list}>
+                  {layouts.list.map((work, i) => <div key={i}>
+                    <ShowcaseCard
+                      imageUrl={work.image.url}
+                      imageAlt={work.image.alt}
+                      title={work.title}
+                      descr={work.content}
+                    />
+                  </div>)}
+                </Carousel>
+              </div>
               break
 
             // clients
             case layouts.acf_fc_layout === 'clients':
-              layout = <ClientsCarousel data={layouts.list} />
+              layout = <ClientsCarousel>
+                {layouts.list.map((work, i) => <div key={i}>
+                  <ClientsCard
+                    imageUrl={work.image.url}
+                    imageAlt={work.image.alt}
+                    title={work.title}
+                    descr={work.copy}
+                  />
+                </div>)}
+              </ClientsCarousel>
               break
 
             default:

@@ -7,6 +7,10 @@
     "what-we-offer": "What we <br /><1><0>{{offer}}</0></1>",
     "who-we-serve": "Who we <br /><1><0>{{serve}}</0></1>"
   },
+  "services":{
+    "design-and-engineering": "Design & Engineering",
+    "how-we-do": "How we do it"
+  },
   "top-menu": {
     "services": "Services",
     "industries": "Industries",
@@ -19,6 +23,7 @@
     "our-mission": "Our mission",
     "our-strengths": "Our strengths",
     "our-services": "Our services",
+    "services": "Services",
     "industries": "Industries",
     "our-work": "Our work",
     "our-clients": "Our clients"

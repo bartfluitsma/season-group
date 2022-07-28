@@ -27,12 +27,12 @@ const Header = ({ t, i18n }) => {
         <div className={!mobileMenu ? 'header__toggleClose' : 'header__menu'}>
           <ul>
             <li>
-              <Link to="/" >
+              <Link to="/services" >
                 {t('top-menu.services')}
               </Link>
             </li>
             <li>
-              <Link to="/" >
+              <Link to="/industries" >
                 {t('top-menu.industries')}
               </Link>
             </li>
@@ -42,11 +42,11 @@ const Header = ({ t, i18n }) => {
               </Link>
             </li>
             <li>
-              <Link to="/" >
+              <Link to="/news" >
                 {t('top-menu.news')}
               </Link>
             </li>          <li>
-              <Link to="/" >
+              <Link to="/insights" >
                 {t('top-menu.insights')}
               </Link>
             </li>
