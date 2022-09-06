@@ -10,9 +10,9 @@
 
     h1 {
       width: 240px;
-      line-height: 52px;
       margin: auto;
       margin-bottom: 77px;
+      @include title-page;
     }
   }
 
@@ -94,8 +94,8 @@
 
       h1 {
         width: 350px;
-        line-height: 77px;
         margin: 70px 5vw 216px 7vw;
+        
       }
     }
 
@@ -109,13 +109,13 @@
       width: 100%;
       display: flex;
       flex-direction:row-reverse;
-      justify-content: flex-end;
+      justify-content: center;
     }
 
     &__main-image {
       order: 1;
-      width: 607px;
-      height: 822px;
+      width: calvw(700, $maxlarge) + vw;
+      height: calvw(950, $maxlarge) + vw;
       background-color: $azure;
       box-shadow: 10px 10px 60px 0 rgba(154, 154, 154, 0.61);
       margin: 0 ;
@@ -123,8 +123,8 @@
 
     &__secondImage {
       display: block;
-      width: 333px;
-      height: 451px;
+      width: calvw(333, 1440) + vw;
+      height: calvw(451, 1440) + vw;;
       margin-left: 7vw;
       background-color: $azure;
       box-shadow: 10px 10px 60px 0 rgba(154, 154, 154, 0.61);

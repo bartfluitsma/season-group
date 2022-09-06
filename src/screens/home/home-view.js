@@ -35,7 +35,7 @@ const HomeView = ({ data, loading }) => {
 
       {/* block; tagline, title, text */}
 
-      <div>
+      <div className="home__layout">
         {_.map(data, (layouts, idx) => {
           let layout
           switch (true) {

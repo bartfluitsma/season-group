@@ -5,10 +5,14 @@
 
 .home {
   &__container {
-    margin: 90px $containerSidePaddingMobile 0 $containerSidePaddingMobile;
+    @include container-fluid;
     .page-title {
       @include title-pages;
     }
+  }
+
+  &__layout {
+    @include container-fluid;
   }
 
   &__numbers{
@@ -44,7 +48,7 @@
     } 
     
     &__container {
-      margin: 100px $containerSidePadding 0 $containerSidePadding;
+      padding-top: 100px;
     } 
     .page-title {
       @include title-pages;

@@ -109,9 +109,10 @@
 
     &__container {
       display: grid;
+      max-width: 1920px;
+      margin: 0 auto;
       place-items: center;
       height: 120px;
-      padding: 0 3.9vw;
     }
 
     &__sub-container {
