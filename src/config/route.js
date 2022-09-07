@@ -24,5 +24,13 @@ module.exports = [
     route: '/crs-detail/',
     matchPath: '/crs-detail/*',
   },
+  {
+    route: '/insights/',
+    matchPath: '/insights/*',
+  },
+  {
+    route: '/careers-detail/',
+    matchPath: '/careers-detail/*',
+  },
 
 ]

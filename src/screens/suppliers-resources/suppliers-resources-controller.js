@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import makeRequest from '../../helpers/make-request'
-import WorkWithUsView from './work-with-us-view'
+import SuppliersResourcesView from './suppliers-resources-view'
 
-const WorkWithusController = () => {
+const SuppliersResourcesController = () => {
   const [loading, setLoading] = useState(false)
-  const [dataWorkVhitUs, setDataWorkVhitUs] = useState([])
+  const [dataSuppliersResources, setDataSuppliersResources] = useState([])
 
   // catch with useEffect so the data will be contained
-  const getDataWorkVhitUs = async () => {
+  const getDataSuppliersResources = async () => {
     setLoading(true)
-    const fields = 'id,title,slug,acf'
+    const fields = 'id,title,slug,acf,human_date,location'
     const headers = {
       'Content-Type': 'application/json',
     }
@@ -17,13 +17,12 @@ const WorkWithusController = () => {
     // fetch the data with makerequest
     makeRequest({
       headers,
-      endPoint: 'pages',
+      endPoint: 'suppliers-resources',
       params: {
-        slug: 'work-with-us',
         fields,
       },
     }).then((resp) => {
-      setDataWorkVhitUs(resp.data[0])
+      setDataSuppliersResources(resp.data)
       setLoading(false)
     })
       .catch((error) => {
@@ -32,17 +31,17 @@ const WorkWithusController = () => {
       })
   }
   useEffect(() => {
-    getDataWorkVhitUs()
+    getDataSuppliersResources()
   }, [])
 
-  console.log('WorkWithus data controller after reqeust', dataWorkVhitUs)
+  console.log('Home data controller after reqeust', dataSuppliersResources)
   const viewProps = {
-    data: dataWorkVhitUs,
+    data: dataSuppliersResources,
     loading,
   }
   return (
-    <WorkWithUsView {...viewProps} />
+    <SuppliersResourcesView {...viewProps}/>
   )
 }
 
-export default WorkWithusController
+export default SuppliersResourcesController

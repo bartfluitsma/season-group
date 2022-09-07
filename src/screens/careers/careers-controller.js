@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import makeRequest from '../../helpers/make-request'
-import WorkWithUsView from './work-with-us-view'
+import CareersView from './careers-view'
 
-const WorkWithusController = () => {
+const CareersCotroller = () => {
   const [loading, setLoading] = useState(false)
-  const [dataWorkVhitUs, setDataWorkVhitUs] = useState([])
+  const [dataCareers, setDataCareers] = useState([])
 
   // catch with useEffect so the data will be contained
-  const getDataWorkVhitUs = async () => {
+  const getDataCareers = async () => {
     setLoading(true)
     const fields = 'id,title,slug,acf'
     const headers = {
@@ -19,11 +19,11 @@ const WorkWithusController = () => {
       headers,
       endPoint: 'pages',
       params: {
-        slug: 'work-with-us',
+        slug: 'careers',
         fields,
       },
     }).then((resp) => {
-      setDataWorkVhitUs(resp.data[0])
+      setDataCareers(resp.data[0])
       setLoading(false)
     })
       .catch((error) => {
@@ -32,17 +32,17 @@ const WorkWithusController = () => {
       })
   }
   useEffect(() => {
-    getDataWorkVhitUs()
+    getDataCareers()
   }, [])
 
-  console.log('WorkWithus data controller after reqeust', dataWorkVhitUs)
+  console.log('Home data controller after reqeust', dataCareers)
   const viewProps = {
-    data: dataWorkVhitUs,
+    data: dataCareers,
     loading,
   }
   return (
-    <WorkWithUsView {...viewProps} />
+    <CareersView {...viewProps}/>
   )
 }
 
-export default WorkWithusController
+export default CareersCotroller

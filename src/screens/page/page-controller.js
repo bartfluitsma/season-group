@@ -10,28 +10,29 @@ const PageController = (props) => {
   const [page, setPage] = useState([])
   const [loading, setLoading] = useState(false)
   const { t, i18n } = useTranslation()
-  // const getTerms = useCallback(async () => {
-  //   setLoading(true)
 
-  //   const headers = {
-  //     'Content-Type': 'application/json',
-  //   }
-  //   makeRequest({
-  //     headers,
-  //     endPoint: 'pages',
-  //     params: {
-  //       lang: i18n.language,
-  //       slug,
-  //     },
-  //   }).then((resp) => {
-  //     setPage(resp.data[0])
-  //     setLoading(false)
-  //   })
-  // }, [])
+  const getPage = useCallback(async () => {
+    setLoading(true)
 
-  // useEffect(() => {
-  //   getTerms()
-  // }, [i18n.language])
+    const headers = {
+      'Content-Type': 'application/json',
+    }
+    makeRequest({
+      headers,
+      endPoint: 'pages',
+      params: {
+        // lang: i18n.language,
+        slug,
+      },
+    }).then((resp) => {
+      setPage(resp.data[0])
+      setLoading(false)
+    })
+  }, [])
+
+  useEffect(() => {
+    getPage()
+  }, [i18n.language])
 
   const viewProps = {
 

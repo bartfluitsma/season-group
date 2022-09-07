@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import makeRequest from '../../helpers/make-request'
-import WorkWithUsView from './work-with-us-view'
+import InsightsView from './insights-view'
 
-const WorkWithusController = () => {
+const InsightsDetailController = ({ slug }) => {
   const [loading, setLoading] = useState(false)
-  const [dataWorkVhitUs, setDataWorkVhitUs] = useState([])
+  const [dataInsights, setDataInsights] = useState([])
 
   // catch with useEffect so the data will be contained
-  const getDataWorkVhitUs = async () => {
+  const getDataInsightsDetail = async () => {
     setLoading(true)
-    const fields = 'id,title,slug,acf'
+    const fields = 'id,title,slug,acf,human_date,thumbnail,related,categories,featured_media'
     const headers = {
       'Content-Type': 'application/json',
     }
@@ -17,13 +17,13 @@ const WorkWithusController = () => {
     // fetch the data with makerequest
     makeRequest({
       headers,
-      endPoint: 'pages',
+      endPoint: 'insights',
       params: {
-        slug: 'work-with-us',
+        slug,
         fields,
       },
     }).then((resp) => {
-      setDataWorkVhitUs(resp.data[0])
+      setDataInsights(resp.data[0])
       setLoading(false)
     })
       .catch((error) => {
@@ -32,17 +32,17 @@ const WorkWithusController = () => {
       })
   }
   useEffect(() => {
-    getDataWorkVhitUs()
+    getDataInsightsDetail()
   }, [])
 
-  console.log('WorkWithus data controller after reqeust', dataWorkVhitUs)
+  console.log('Home data controller after reqeust', dataInsights)
   const viewProps = {
-    data: dataWorkVhitUs,
+    data: dataInsights,
     loading,
   }
   return (
-    <WorkWithUsView {...viewProps} />
+    <InsightsView {...viewProps}/>
   )
 }
 
-export default WorkWithusController
+export default InsightsDetailController
