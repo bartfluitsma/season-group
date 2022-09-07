@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import makeRequest from '../../helpers/make-request'
-import AboutUsView from './about-us-view'
+import NewsView from './news-view'
 
-const AboutUsCotroller = () => {
+const NewsCotroller = ({ slug }) => {
   const [loading, setLoading] = useState(false)
-  const [dataAboutUs, setDataAboutUs] = useState([])
+  const [dataNews, setDataNews] = useState([])
 
   // catch with useEffect so the data will be contained
-  const getDataAboutUs = async () => {
+  const getDataNews = async () => {
     setLoading(true)
-    const fields = 'id,title,slug,acf'
+    const fields = 'id,title,slug,acf,human_date,thumbnail,related,location,genre,featured_media'
     const headers = {
       'Content-Type': 'application/json',
     }
@@ -17,13 +17,13 @@ const AboutUsCotroller = () => {
     // fetch the data with makerequest
     makeRequest({
       headers,
-      endPoint: 'pages',
+      endPoint: 'posts',
       params: {
-        slug: 'about',
+        slug,
         fields,
       },
     }).then((resp) => {
-      setDataAboutUs(resp.data[0])
+      setDataNews(resp.data)
       setLoading(false)
     })
       .catch((error) => {
@@ -32,17 +32,17 @@ const AboutUsCotroller = () => {
       })
   }
   useEffect(() => {
-    getDataAboutUs()
+    getDataNews()
   }, [])
 
-  console.log('Home data controller after reqeust', dataAboutUs)
+  console.log('Home data controller after reqeust', dataNews)
   const viewProps = {
-    data: dataAboutUs,
+    data: dataNews,
     loading,
   }
   return (
-    <AboutUsView {...viewProps}/>
+    <NewsView {...viewProps}/>
   )
 }
 
-export default AboutUsCotroller
+export default NewsCotroller

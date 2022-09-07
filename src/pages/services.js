@@ -8,7 +8,6 @@ const ServicesPage = (props) => {
   return (
     <Router>
       <ServicesTemplate {...props} path={`${path}:slug`} />
-      <ServicesTemplate {...props} path={`${path}:id`} />
     </Router>
   )
 }

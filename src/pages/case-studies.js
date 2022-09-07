@@ -8,7 +8,6 @@ const CaseStudyPage = (props) => {
   return (
     <Router>
       <CaseStudyTemplate {...props} path={`${path}:slug`} />
-      <CaseStudyTemplate {...props} path={`${path}:id`} />
     </Router>
   )
 }

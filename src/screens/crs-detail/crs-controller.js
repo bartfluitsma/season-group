@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import makeRequest from '../../helpers/make-request'
-import AboutUsView from './about-us-view'
+import CrsView from './crs-view'
 
-const AboutUsCotroller = () => {
+const CrsCotroller = ({ slug }) => {
   const [loading, setLoading] = useState(false)
-  const [dataAboutUs, setDataAboutUs] = useState([])
+  const [dataCrs, setDataCrs] = useState([])
 
   // catch with useEffect so the data will be contained
-  const getDataAboutUs = async () => {
+  const getDataCrs = async () => {
     setLoading(true)
     const fields = 'id,title,slug,acf'
     const headers = {
@@ -17,13 +17,13 @@ const AboutUsCotroller = () => {
     // fetch the data with makerequest
     makeRequest({
       headers,
-      endPoint: 'pages',
+      endPoint: 'csr',
       params: {
-        slug: 'about',
+        slug,
         fields,
       },
     }).then((resp) => {
-      setDataAboutUs(resp.data[0])
+      setDataCrs(resp.data[0])
       setLoading(false)
     })
       .catch((error) => {
@@ -32,17 +32,17 @@ const AboutUsCotroller = () => {
       })
   }
   useEffect(() => {
-    getDataAboutUs()
+    getDataCrs()
   }, [])
 
-  console.log('Home data controller after reqeust', dataAboutUs)
+  console.log('Home data controller after reqeust', dataCrs)
   const viewProps = {
-    data: dataAboutUs,
+    data: dataCrs,
     loading,
   }
   return (
-    <AboutUsView {...viewProps}/>
+    <CrsView {...viewProps}/>
   )
 }
 
-export default AboutUsCotroller
+export default CrsCotroller

@@ -20,5 +20,9 @@ module.exports = [
     route: '/leadership/',
     matchPath: '/leadership/*',
   },
+  {
+    route: '/crs-detail/',
+    matchPath: '/crs-detail/*',
+  },
 
 ]

@@ -27,7 +27,7 @@ const ServicesController = ({ slug }) => {
       setLoading(false)
     })
       .catch((error) => {
-        console.log(error)
+        console.error(error)
         setLoading(false)
       })
   }
