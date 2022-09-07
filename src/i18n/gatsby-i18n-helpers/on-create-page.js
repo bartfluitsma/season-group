@@ -28,8 +28,8 @@ exports.onCreatePage = ({
 
   // local variable
   // const availableLocales = process.env.GATSBY_AVAILABLE_LOCALES
-  const availableLocales = process.env.GATSBY_AVAILABLE_LOCALES.split(' ')
-
+  const locales = process.env.GATSBY_AVAILABLE_LOCALES || 'en zh-hant'
+  const availableLocales = locales.split(' ')
   const defaultLocale = process.env.GATSBY_DEFAULT_LOCALE
 
   return new Promise((resolve) => {
