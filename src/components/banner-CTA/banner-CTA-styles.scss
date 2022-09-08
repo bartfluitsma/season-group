@@ -1,4 +1,5 @@
-@use '../../theme/theme.scss' as *;
+@use "../../theme/_global.scss"as *;
+@use "../../theme/theme.scss"as *;
 
 .bannerCTA {
   margin: 125px -15px auto -15px;
@@ -8,9 +9,10 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  &__container{
-    h1{
+  &__container {
+    h1 {
       margin-bottom: 48px;
+      @include title-pages
     }
   }
 
@@ -23,13 +25,10 @@
     padding: 0px 120px 254px 120px;
     background-position: right;
 
-    &__container{
-      h1{
+    &__container {
+      h1 {
         margin-bottom: 32px;
       }
     }
   }
-
-
-  
 }

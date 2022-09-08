@@ -9,14 +9,15 @@ const WaysHowCard = ({
   imgNumber,
   title,
   text,
+  idx,
 }) => (
   <div className='waysHowCard__container'>
     <div className='waysHowCard__subcontainer'>
-      <div className='waysHowCard__imageContainer'>
-        <img src={imgNumber} alt=" " />
+      <div className='waysHowCard__number'>
+        <p >0{idx + 1}</p>
       </div>
       <h4>{title}</h4>
-      <p>{text}</p>
+      <div className='rich-text' dangerouslySetInnerHTML={{ __html: text }} />
     </div>
   </div>
 )

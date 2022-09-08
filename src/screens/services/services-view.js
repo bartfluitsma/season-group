@@ -19,14 +19,11 @@ const ServicesView = ({ data, loading }) => {
     return <Spinner loading={loading} />
   }
 
-  console.log('Data from view services, data:', data)
-
   return (
     <div className="services__container">
       <Seo title="Season Group: Services" />
-
       <div>
-        {_.map(data, (layouts, idx) => {
+        {_.map(_.get(data, 'acf.rows'), (layouts, idx) => {
           let layout
           switch (true) {
             // Services
@@ -35,7 +32,7 @@ const ServicesView = ({ data, loading }) => {
                 <div className='services__servicesSubcontainer'>
                   <Tagline text={t('tagline.services')} />
                   <div className="largeTitle">
-                    <h1>{t('services.design-and-engineering')}</h1>
+                    <h1 className="page-title">{t('services.design-and-engineering')}</h1>
                   </div>
                   <p className='servicesDescription'>{layouts.copy}</p>
                   <img className='firstImage' src={layouts.image_second.url} alt={layouts.image_second.alt} />
@@ -46,21 +43,25 @@ const ServicesView = ({ data, loading }) => {
 
             // sub services
             case layouts.acf_fc_layout === 'sub_services':
-              layout = <div className='services__subservicesContainer'>{layouts.list.map((subservice, i) => <SubServices key={i} title={subservice.title} text={subservice.content} link={subservice.slug} />)}
+              layout = <div key={idx} className='services__subservicesContainer'>{layouts.list.map((subservice, i) => <SubServices key={i} title={subservice.title} text={subservice.content} link={subservice.slug} />)}
               </div>
               break
 
             // how we do it
             case layouts.acf_fc_layout === 'how_to_list':
-              layout = <div className='services__howToContainer'>
+              layout = <div key={idx} className='services__howToContainer'>
                 <div className="carousel__tagline">
                   <h2>{t('services.how-we-do')}</h2>
                 </div>
-                <Carousel data={layouts.list}>
+                <Carousel
+                  arrows={true}
+                  data={layouts.list}
+                >
                   {layouts.list.map((work, i) => <div key={i}>
                     <WaysHowCard
                       title={work.title}
                       text={work.copy}
+                      idx={i}
                       imgNumber='https://seasongr-1935.demosrv.dev/wp-content/uploads/2022/07/4.png'
                     />
                   </div>)}

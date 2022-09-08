@@ -12,10 +12,14 @@
 
 @mixin title-page {
   color: $primary;
-  font-size: clamp(3.75rem, 4vw + 3rem, 6.25rem);
-  line-height: clamp(4rem, 4vw + 3rem, 6.5rem);
+  font-size: 45px;
+  line-height: 57px;
   letter-spacing: 0;
   font-weight: bold;
+  @media (min-width: $desktop) {
+    font-size: clamp(3.75rem, 4vw + 3rem, 6.25rem);
+    line-height: clamp(4rem, 4vw + 3rem, 6.5rem);
+  }
 }
 
 @mixin title-pages {

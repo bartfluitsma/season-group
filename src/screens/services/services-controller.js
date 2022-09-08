@@ -23,7 +23,7 @@ const ServicesController = ({ slug }) => {
         slug,
       },
     }).then((resp) => {
-      setDataServices(resp.data)
+      setDataServices(resp.data[0])
       setLoading(false)
     })
       .catch((error) => {

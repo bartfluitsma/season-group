@@ -5,7 +5,7 @@
   &__container {
     max-width: 275px;
     margin-top: 25px;
-    margin-right: 20px;
+    margin: 20px 8px;
     p{ 
       font-size: 17px;
       // margin-right: 24px;
@@ -15,13 +15,17 @@
     }
   }
 
-  &__imageContainer{
-    img{
-      width: 54px;
-      height: 100%;
-      margin-bottom: 24px;
+  &__number{
+    p {
+      color: white;
+      font-size: 60px;
+      line-height: 80px;
+      font-weight: 900;
+      text-shadow: -1px -1px 0 rgba(0,189,195,0.5), 1px -1px 0 rgba(0,189,195,0.5), -1px 1px 0 rgba(0,189,195,0.5), 1px 1px 0 rgba(0,189,195,0.5);
     }
-  }
+  } 
+ 
+  
 
   @media (min-width: $desktop) {
     &__imageContainer{
@@ -31,7 +35,7 @@
     }
     
     &__container {
-      margin-top: 85px;
+      margin-top: 40px;
     }
     
   }
