@@ -1,0 +1,34 @@
+@use '../../../../theme/theme.scss' as *;
+@use "../../../../theme/_global.scss" as *;
+
+.subservices {
+
+  &__container {
+    padding: 50px 0px;
+    border-bottom: 1px solid $lightGray;
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      h3 {
+        color: $azure;
+      }
+    }
+
+  }
+
+  &__buttonContainer {
+    margin-top: 32px;
+  }
+
+  @media (min-width: $desktop) {
+  &__container {
+    &:nth-of-type(3) {
+      border-bottom: none;
+    }
+  }
+  }
+}

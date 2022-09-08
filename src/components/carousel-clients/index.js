@@ -16,7 +16,7 @@ const ClientsCarousel = ({
   // tag,
   // title,
   // parentLink,
-  // children
+  children,
   inner,
   arrows,
   data,
@@ -103,14 +103,7 @@ const ClientsCarousel = ({
           <div>
             <Slider
               {...settings}>
-              {data.map((work, i) => <div key={i}>
-                <ClientsCard
-                  imageUrl={work.image.url}
-                  imageAlt={work.image.alt}
-                  title={work.title}
-                  descr={work.copy}
-                />
-              </div>)}
+              {children}
             </Slider>
           </div>
         </div>

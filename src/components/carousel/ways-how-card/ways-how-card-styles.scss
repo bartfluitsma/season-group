@@ -1,0 +1,42 @@
+@use '../../../theme/theme.scss'as *;
+@use "../../../theme/_global.scss" as *;
+
+.waysHowCard {
+  &__container {
+    max-width: 275px;
+    margin-top: 25px;
+    margin: 20px 8px;
+    p{ 
+      font-size: 17px;
+      // margin-right: 24px;
+    }
+    p, h4{
+      padding-right: 10px;
+    }
+  }
+
+  &__number{
+    p {
+      color: white;
+      font-size: 60px;
+      line-height: 80px;
+      font-weight: 900;
+      text-shadow: -1px -1px 0 rgba(0,189,195,0.5), 1px -1px 0 rgba(0,189,195,0.5), -1px 1px 0 rgba(0,189,195,0.5), 1px 1px 0 rgba(0,189,195,0.5);
+    }
+  } 
+ 
+  
+
+  @media (min-width: $desktop) {
+    &__imageContainer{
+      img{
+        width: 62px;
+      }
+    }
+    
+    &__container {
+      margin-top: 40px;
+    }
+    
+  }
+}
