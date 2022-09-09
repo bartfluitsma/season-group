@@ -27,9 +27,14 @@ function makeRequest({
       throw error
     })
     // responding with the data as "data"
-    .then((response) => ({
-      data: response.data,
-    }))
+    .then((response) => {
+      console.log('🚀 ~ file: index.js ~ line 31 ~ .then ~ response', response)
+      return {
+        data: response.data,
+        total_items: response.headers['x-wp-total'],
+        total_pages: response.headers['x-wp-totalpages'],
+      }
+    })
 }
 
 export default makeRequest

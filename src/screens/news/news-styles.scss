@@ -2,4 +2,8 @@
   &__container {
     
   }
+  &__paginator {
+    display: flex;
+    justify-content: center;
+  }
 }

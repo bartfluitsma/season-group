@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { HeaderLintingPages, Spinner, ListView } from '../../components'
+import { HeaderLintingPages, Spinner, ListView, Paginator } from '../../components'
 import { useContentFilters } from '../../hooks/use-content-filters'
 import { getOptionsSelect } from '../../helpers'
 import Card from './components/card'
@@ -15,6 +15,7 @@ const NewsView = ({
   const { t } = useTranslation()
   const [options, setOptions] = useState([])
   const { genreFilter, locations } = useContentFilters()
+
   useEffect(() => {
     const selectOptions = [
       {
@@ -49,6 +50,9 @@ const NewsView = ({
           />
         )
       }
+      <div className="news__paginator">
+        <Paginator itemsPerPage={4} />
+      </div>
     </div>
 
   )

@@ -1,0 +1,23 @@
+@use "../../theme/theme.scss"as *;
+@use "../../theme/_global.scss"as *;
+
+.paginator {
+  .page-item {
+    margin: 0 10px;
+    width: 35px;
+    height: 35px;
+
+    a.page-link {
+      width: 35px;
+      height: 35px;
+      padding: .175rem .75rem
+    }
+
+    &.active {
+      a.page-link {
+        background-color: $azure;
+        border-color: $azure;
+      }
+    }
+  }
+}
