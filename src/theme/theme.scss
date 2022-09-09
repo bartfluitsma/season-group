@@ -9,6 +9,8 @@ $white: #ffffff;
 $black: #000000;
 $darkBlue: #273A59;
 $lightGray: #D3D3D3;
+$middletGray: #9e9e9e;
+
  
 // break-points
 $mobile: 480px;
@@ -23,6 +25,9 @@ $gapTitlePageMobile: 60px; // from bottom nav (220px from top)
 $maxTextWidth: 896px;
 $containerSidePadding: 7.8vw; 
 $containerSidePaddingMobile: 15px; 
+$containermaxWidth: 1920px;
+$paddingDesktop: 0 120px;
+$paddingMobile: 0 24px;
 
 // fonts
 $title: 'Gilroy', sans-serif;

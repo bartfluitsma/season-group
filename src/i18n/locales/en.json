@@ -73,5 +73,9 @@
   "terms-and-conditions": {
     "title": "Terms and conditions",
     "description": "Nisi veniam nulla sint officia veniam aute. Ad non sit irure reprehenderit sint. Aliqua anim adipisicing ea commodo Lorem dolor qui sunt enim. Incididunt veniam veniam nisi proident amet do dolore minim fugiat aute qui."
+  },
+  "news": {
+    "title": "News",
+    "no-results": "No results. Please try a new search."
   }
 }

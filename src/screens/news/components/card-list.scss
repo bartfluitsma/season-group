@@ -1,0 +1,53 @@
+@use "../../../theme/theme.scss" as *;
+@use "../../../theme/_global.scss" as *;
+
+.cardNews{
+  &__container {
+    border-bottom: 1px solid $lightGray;
+    margin-bottom: 40px;
+    padding: 0 12px 40px;
+  }
+  &__content {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h4 {
+      margin-top: 15px;
+    }
+    &:hover {
+      h4 {
+        text-decoration: underline;
+        color: $azure;
+      }
+    }
+  }
+  &__tags {
+    color: $lightGray;
+    font-family: $textFont;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 30px;
+    span {
+      color: $text;
+
+    }
+  }
+  &__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 121px;
+    box-shadow: $boxShadow;
+    max-width: 200px;
+  }
+  &__date {
+    color: $middletGray
+  } 
+  @media (min-width: $desktop) {
+    &__image {
+      min-height: 200px;
+      max-width: 100%;
+    }
+  }
+}

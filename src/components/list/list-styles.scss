@@ -1,0 +1,28 @@
+@use "../../theme/theme.scss" as *;
+@use "../../theme/_global.scss" as *;
+
+.list {
+  &__container {
+    padding: $paddingMobile;
+
+  }
+
+  @media (min-width: $desktop) {
+    &__container {
+      padding: $paddingDesktop;
+      padding-top: 150px;
+
+    }
+  }
+}
+.noResults {
+  p {
+    color: $primary;
+    font-family: $title;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 40px;
+
+  }
+}

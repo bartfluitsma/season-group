@@ -1,7 +1,77 @@
 {
+  "home":{
+    "heroTitle": "Global <1><0>{{vertical}}</0></1> Together",
+    "bannerCTA": "Ready to <1><0>{{produce}}</0></1><br /> an impact?",
+    "our-mission-title": "Improve world's living standard through <1><0>{{innovative}}</0></1> product development.",
+    "partner-with-us": "Why <1><0>{{partner}}</0></1> <br /> with us",
+    "what-we-offer": "What we <br /><1><0>{{offer}}</0></1>",
+    "who-we-serve": "Who we <br /><1><0>{{serve}}</0></1>"
+  },
+  "services":{
+    "design-and-engineering": "Design & Engineering",
+    "how-we-do": "How we do it"
+  },
+  "top-menu": {
+    "services": "Services",
+    "industries": "Industries",
+    "about-us": "About us",
+    "news": "News",
+    "insights": "Insights",
+    "work-with-us": "Work with us"
+  },
+  "tagline":{
+    "our-mission": "Our mission",
+    "our-strengths": "Our strengths",
+    "our-services": "Our services",
+    "services": "Services",
+    "industries": "Industries",
+    "our-work": "Our work",
+    "our-clients": "Our clients"
+  },
+  "buttons":{
+    "learn-about-us": "Learn about us"
+  },
+  "footer-menu": {
+    "copyright": "All rights reserved © 2022 Season Group",
+    "terms-and-conditions": "Terms and conditions",
+    "services": "Services",
+    "industries": "Industries",
+    "season-group": "Season Group",
+    "about-us": "About us",
+    "desc": "Season Group is a vertically integrated electronic manufacturing services (EMS) provider. Our global presence, world-class culture and end-to-end service enables our customers to focus on driving their business forward.",
+    "privacy-policy": "Privacy policy",
+    "design-and-engineering": "Design & Engineering",
+    "manufacturing": "Manufacturing",
+    "supply-chain-management": "Supply chain management",
+    "after-market": "After market",
+    "smart-living": "Smart Living",
+    "power-and-utility": "Power & Utility",
+    "healthcare": "Healthcare",
+    "security": "Security",
+    "automotive-and-aerospace": "Automotive & Aerospace",
+    "industrial-equipment": "Industrial equipment",
+    "our-story": "Our story",
+    "our-locations": "Our locations",
+    "leadership": "Leadership",
+    "CSR": "CSR",
+    "SG-wireless": "SG Wireless",
+    "news": "News",
+    "insights": "Insights",
+    "contact-us": "Contact us",
+    "careers": "Careers",
+    "supplier-resources": "Supplier resources"  },
   "not-found": {
     "title": "Page Not Found",
     "description": "The page you are looking for doesn't exist. Please try again later.",
     "button": "Return Home"
+  },
+  "thank-you": {
+    "title": "Thank you",
+    "description": "Your message has been sent successfully.",
+    "button": "Return Home"
+  },
+  "terms-and-conditions": {
+    "title": "Terms and conditions",
+    "description": "Nisi veniam nulla sint officia veniam aute. Ad non sit irure reprehenderit sint. Aliqua anim adipisicing ea commodo Lorem dolor qui sunt enim. Incididunt veniam veniam nisi proident amet do dolore minim fugiat aute qui."
   }
 }

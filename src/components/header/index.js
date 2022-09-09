@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from '@reach/router'
+import { Link } from 'gatsby'
 import { withTrans } from '../../i18n/withTrans'
 import './header-styles.scss'
 import Logo from '../../assets/icons/seasongroup_main-logo.svg'
@@ -27,22 +27,22 @@ const Header = ({ t, i18n }) => {
         <div className={!mobileMenu ? 'header__toggleClose' : 'header__menu'}>
           <ul>
             <li>
-              <Link to="/services" >
+              <Link to="/services/" >
                 {t('top-menu.services')}
               </Link>
             </li>
             <li>
-              <Link to="/industries" >
+              <Link to="/industries/" >
                 {t('top-menu.industries')}
               </Link>
             </li>
             <li>
-              <Link to="/about-us" >
+              <Link to="/about-us/" >
                 {t('top-menu.about-us')}
               </Link>
             </li>
             <li>
-              <Link to="/news" >
+              <Link to="/news/" >
                 {t('top-menu.news')}
               </Link>
             </li>          <li>
